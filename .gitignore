@@ -38,3 +38,6 @@ Thumbs.db
 
 # 実行ファイル
 bin/
+
+# ctags -R 環境依存のフルパスが出るため
+tags
