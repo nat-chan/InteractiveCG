@@ -35,3 +35,6 @@ Thumbs.db
 *.exe
 *.out
 *.app
+
+# 実行ファイル
+bin/
