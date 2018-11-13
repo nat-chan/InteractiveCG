@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Modeler" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Modeler" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Modeler" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-s" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="`fltk-config --cxxflags`" />
+			<Add directory="../../../../../usr/include" />
+			<Add directory="../../../../../usr/local/include" />
+		</Compiler>
+		<Linker>
+			<Add option="`fltk-config --ldstaticflags`" />
+			<Add library="../../../../../usr/local/lib/libjpeg.a" />
+			<Add library="../../../../../usr/local/lib/libfltk_images.a" />
+			<Add library="../../../../../usr/local/lib/libfltk_gl.a" />
+			<Add library="../../../../../usr/local/lib/libfltk_forms.a" />
+			<Add library="../../../../../usr/local/lib/libfltk.a" />
+			<Add library="../../../../../usr/lib/x86_64-linux-gnu/libpng16.so.16" />
+			<Add library="../../../../../usr/lib/x86_64-linux-gnu/libGL.so.1" />
+			<Add library="../../../../../usr/lib/x86_64-linux-gnu/libGLU.so.1" />
+			<Add directory="../../../../../usr/local/lib" />
+			<Add directory="../../../../../usr/lib/x86_64-linux-gnu" />
+		</Linker>
+		<Unit filename="CImg.h" />
+		<Unit filename="animator.h" />
+		<Unit filename="animatoruiwindows.cxx" />
+		<Unit filename="animatoruiwindows.h" />
+		<Unit filename="camera.cpp" />
+		<Unit filename="camera.h" />
+		<Unit filename="color.cpp" />
+		<Unit filename="color.h" />
+		<Unit filename="controller.h" />
+		<Unit filename="curve.cpp" />
+		<Unit filename="curve.h" />
+		<Unit filename="curveevaluator.cpp" />
+		<Unit filename="curveevaluator.h" />
+		<Unit filename="dialog.h" />
+		<Unit filename="file dialog/FL/Fl_Native_File_Chooser.H" />
+		<Unit filename="file dialog/FL/Fl_Native_File_Chooser_FLTK.H" />
+		<Unit filename="file dialog/FL/Fl_Native_File_Chooser_MAC.H" />
+		<Unit filename="file dialog/FL/Fl_Native_File_Chooser_WIN32.H" />
+		<Unit filename="graphwidget.cpp" />
+		<Unit filename="graphwidget.h" />
+		<Unit filename="imageio.cpp" />
+		<Unit filename="imageio.h" />
+		<Unit filename="indicatorwindow.cpp" />
+		<Unit filename="indicatorwindow.h" />
+		<Unit filename="linearcurveevaluator.cpp" />
+		<Unit filename="linearcurveevaluator.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mat.h" />
+		<Unit filename="model.h" />
+		<Unit filename="modelerapp.cpp" />
+		<Unit filename="modelerapp.h" />
+		<Unit filename="modelerdraw.cpp" />
+		<Unit filename="modelerdraw.h" />
+		<Unit filename="modelerui.cpp" />
+		<Unit filename="modelerui.h" />
+		<Unit filename="modelerview.cpp" />
+		<Unit filename="modelerview.h" />
+		<Unit filename="particleSystem.cpp" />
+		<Unit filename="particleSystem.h" />
+		<Unit filename="point.cpp" />
+		<Unit filename="point.h" />
+		<Unit filename="rect.cpp" />
+		<Unit filename="rect.h" />
+		<Unit filename="rulerwindow.cpp" />
+		<Unit filename="rulerwindow.h" />
+		<Unit filename="vec.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

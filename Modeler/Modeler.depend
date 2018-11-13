@@ -1,0 +1,957 @@
+# depslib dependency file v1.0
+1351681702 source:/home/jiang/icg_cb/Modeler/Modeler/animatoruiwindows.cpp
+	"animatoruiwindows.h"
+
+1351681702 /home/jiang/icg_cb/Modeler/Modeler/animatoruiwindows.h
+	<FL/Fl.H>
+	<FL/Fl_Window.H>
+	<FL/Fl_Menu_Bar.H>
+	<FL/Fl_Browser.H>
+	<FL/Fl_Tabs.H>
+	<FL/Fl_Scroll.H>
+	<FL/Fl_Pack.H>
+	<FL/Fl_Group.H>
+	<FL/Fl_Box.H>
+	"rulerwindow.h"
+	"graphwidget.h"
+	<FL/Fl_Choice.H>
+	<FL/Fl_Light_Button.H>
+	<FL/Fl_Button.H>
+	<FL/Fl_Value_Slider.H>
+	"indicatorwindow.h"
+	<FL/Fl_Slider.H>
+	<FL/Fl_Output.H>
+	"modelerview.h"
+	"modelerapp.h"
+
+1536299935 /usr/local/include/FL/Fl.H
+	<FL/Fl_Cairo.H>
+	"fl_utf8.h"
+	"Enumerations.H"
+
+1536299935 /usr/local/include/FL/Fl_Cairo.H
+	<FL/Fl_Export.H>
+	<cairo-xlib.h>
+	<cairo-win32.h>
+	<cairo-quartz.h>
+
+1536299935 /usr/local/include/FL/Fl_Export.H
+
+1536299935 /usr/local/include/FL/fl_utf8.h
+	"Fl_Export.H"
+	"fl_types.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<locale.h>
+	<ctype.h>
+	<wchar.h>
+	<sys/stat.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<X11/Xlocale.h>
+	<X11/Xlib.h>
+	<locale.h>
+
+1536299935 /usr/local/include/FL/fl_types.h
+
+1536299935 /usr/local/include/FL/Enumerations.H
+	"Fl_Export.H"
+	"fl_types.h"
+
+1536299935 /usr/local/include/FL/Fl_Window.H
+	<windows.h>
+	"Fl_Group.H"
+	"Fl_Bitmap.H"
+	<stdlib.h>
+
+1536299935 /usr/local/include/FL/Fl_Group.H
+	"Fl_Widget.H"
+
+1536299935 /usr/local/include/FL/Fl_Widget.H
+	"Enumerations.H"
+	<stdint.h>
+	<stddef.h>
+
+1536299935 /usr/local/include/FL/Fl_Bitmap.H
+	"Fl_Image.H"
+
+1536299935 /usr/local/include/FL/Fl_Image.H
+	"Enumerations.H"
+	<stdlib.h>
+
+1536299935 /usr/local/include/FL/Fl_Menu_Bar.H
+	"Fl_Menu_.H"
+
+1536299935 /usr/local/include/FL/Fl_Menu_.H
+	"Fl_Widget.H"
+	"Fl_Menu_Item.H"
+
+1536299935 /usr/local/include/FL/Fl_Menu_Item.H
+	"Fl_Widget.H"
+	"Fl_Image.H"
+
+1536299935 /usr/local/include/FL/Fl_Browser.H
+	"Fl_Browser_.H"
+	"Fl_Image.H"
+
+1536299935 /usr/local/include/FL/Fl_Browser_.H
+	"Fl_Group.H"
+	"Fl_Scrollbar.H"
+	<FL/Fl.H>
+
+1536299935 /usr/local/include/FL/Fl_Scrollbar.H
+	"Fl_Slider.H"
+
+1536299935 /usr/local/include/FL/Fl_Slider.H
+	"Fl_Valuator.H"
+
+1536299935 /usr/local/include/FL/Fl_Valuator.H
+	"Fl_Widget.H"
+
+1536299935 /usr/local/include/FL/Fl_Tabs.H
+	"Fl_Group.H"
+
+1536299935 /usr/local/include/FL/Fl_Scroll.H
+	"Fl_Group.H"
+	"Fl_Scrollbar.H"
+
+1536299935 /usr/local/include/FL/Fl_Pack.H
+	<FL/Fl_Group.H>
+
+1536299935 /usr/local/include/FL/Fl_Box.H
+	"Fl_Widget.H"
+
+1351681710 /home/jiang/icg_cb/Modeler/Modeler/rulerwindow.h
+	"FL/Fl_Double_Window.H"
+
+1536299935 /usr/local/include/FL/Fl_Double_Window.H
+	"Fl_Window.H"
+
+1351681704 /home/jiang/icg_cb/Modeler/Modeler/graphwidget.h
+	<FL/Fl.H>
+	<FL/Fl_Gl_Window.H>
+	<FL/Fl_Menu_Button.H>
+	<FL/Fl_Menu_Item.H>
+	<string>
+	<vector>
+	<cassert>
+	"rect.h"
+	"point.h"
+	"curve.h"
+	"curveevaluator.h"
+
+1536299935 /usr/local/include/FL/Fl_Gl_Window.H
+	"Fl_Window.H"
+
+1536299935 /usr/local/include/FL/Fl_Menu_Button.H
+	"Fl_Menu_.H"
+
+1351681710 /home/jiang/icg_cb/Modeler/Modeler/rect.h
+
+1351681708 /home/jiang/icg_cb/Modeler/Modeler/point.h
+	<functional>
+	<iostream>
+	<cmath>
+
+1351681704 /home/jiang/icg_cb/Modeler/Modeler/curve.h
+	<vector>
+	<iostream>
+	<string>
+	"point.h"
+
+1351681704 /home/jiang/icg_cb/Modeler/Modeler/curveevaluator.h
+	"curve.h"
+
+1536299935 /usr/local/include/FL/Fl_Choice.H
+	"Fl_Menu_.H"
+
+1536299935 /usr/local/include/FL/Fl_Light_Button.H
+	"Fl_Button.H"
+
+1536299935 /usr/local/include/FL/Fl_Button.H
+	"Fl_Widget.H"
+
+1536299935 /usr/local/include/FL/Fl_Value_Slider.H
+	"Fl_Slider.H"
+
+1351681706 /home/jiang/icg_cb/Modeler/Modeler/indicatorwindow.h
+	<vector>
+	<FL/Fl_Double_Window.H>
+
+1536299935 /usr/local/include/FL/Fl_Output.H
+	"Fl_Input.H"
+
+1536299935 /usr/local/include/FL/Fl_Input.H
+	"Fl_Input_.H"
+
+1536299935 /usr/local/include/FL/Fl_Input_.H
+	"Fl_Widget.H"
+
+1351681708 /home/jiang/icg_cb/Modeler/Modeler/modelerview.h
+	<FL/Fl_Gl_Window.H>
+
+1351681706 /home/jiang/icg_cb/Modeler/Modeler/modelerapp.h
+	"modelerview.h"
+
+1536507622 source:/home/jiang/icg_cb/Modeler/Modeler/animatoruiwindows.cxx
+	"animatoruiwindows.h"
+
+1351681702 source:/home/jiang/icg_cb/Modeler/Modeler/camera.cpp
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<fstream>
+	<cstdio>
+	"modelerapp.h"
+	"modelerui.h"
+	"camera.h"
+	"curve.h"
+	"curveevaluator.h"
+	"linearcurveevaluator.h"
+
+1536221051 /home/jiang/icg_cb/Modeler/Modeler/modelerui.h
+	<string>
+	<FL/Fl.H>
+	<FL/Fl_Window.H>
+	<FL/Fl_Menu_Bar.H>
+	<FL/Fl_Native_File_Chooser.H>
+	<FL/fl_message.H>
+	"modelerview.h"
+	"modelerdraw.h"
+	"modelerapp.h"
+	"particleSystem.h"
+	"animatoruiwindows.h"
+
+1536299935 /usr/local/include/FL/Fl_Native_File_Chooser.H
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<commdlg.h>
+	<shlobj.h>
+	<FL/Fl_File_Chooser.H>
+	<unistd.h>
+	<FL/filename.H>
+	<FL/Fl_Native_File_Chooser.H>
+	<FL/Fl_Native_File_Chooser.H>
+
+1536299935 /usr/local/include/FL/Fl_File_Chooser.H
+	<FL/Fl.H>
+	<FL/Fl_Double_Window.H>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<FL/Fl_Group.H>
+	<FL/Fl_Choice.H>
+	<FL/Fl_Menu_Button.H>
+	<FL/Fl_Button.H>
+	<FL/Fl_Preferences.H>
+	<FL/Fl_Tile.H>
+	<FL/Fl_File_Browser.H>
+	<FL/Fl_Box.H>
+	<FL/Fl_Check_Button.H>
+	<FL/Fl_File_Input.H>
+	<FL/Fl_Return_Button.H>
+	<FL/fl_ask.H>
+
+1536299935 /usr/local/include/FL/Fl_Preferences.H
+	<stdio.h>
+	"Fl_Export.H"
+
+1536299935 /usr/local/include/FL/Fl_Tile.H
+	"Fl_Group.H"
+
+1536299935 /usr/local/include/FL/Fl_File_Browser.H
+	"Fl_Browser.H"
+	"Fl_File_Icon.H"
+	"filename.H"
+
+1536299935 /usr/local/include/FL/Fl_File_Icon.H
+	"Fl.H"
+
+1536299935 /usr/local/include/FL/filename.H
+	"/usr/include/dirent.h"
+	"Fl_Export.H"
+	<FL/filename.H>
+	<sys/types.h>
+	<direct.h>
+	<sys/types.h>
+	<dirent.h>
+
+1515926384 /usr/include/dirent.h
+	<features.h>
+	<bits/types.h>
+	<bits/dirent.h>
+	<bits/types.h>
+	<bits/posix1_lim.h>
+	<stddef.h>
+
+1536299935 /usr/local/include/FL/Fl_Check_Button.H
+	"Fl_Light_Button.H"
+
+1536299935 /usr/local/include/FL/Fl_File_Input.H
+	<FL/Fl_Input.H>
+
+1536299935 /usr/local/include/FL/Fl_Return_Button.H
+	"Fl_Button.H"
+
+1536299935 /usr/local/include/FL/fl_ask.H
+	"Enumerations.H"
+
+1536299935 /usr/local/include/FL/fl_message.H
+	"fl_ask.H"
+
+1351681708 /home/jiang/icg_cb/Modeler/Modeler/modelerdraw.h
+	<FL/gl.h>
+	<cstdio>
+
+1536299935 /usr/local/include/FL/gl.h
+	"Enumerations.H"
+	<windows.h>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+
+1351681708 /home/jiang/icg_cb/Modeler/Modeler/particleSystem.h
+	"vec.h"
+
+1447144056 /home/jiang/icg_cb/Modeler/Modeler/vec.h
+	<algorithm>
+	<iostream>
+	<cmath>
+	<assert.h>
+	<windows.h>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+
+1351681702 /home/jiang/icg_cb/Modeler/Modeler/camera.h
+	"vec.h"
+	"mat.h"
+	"rect.h"
+	"point.h"
+	"curve.h"
+	"curveevaluator.h"
+	<vector>
+
+1351681706 /home/jiang/icg_cb/Modeler/Modeler/mat.h
+	<iostream>
+
+1351681706 /home/jiang/icg_cb/Modeler/Modeler/linearcurveevaluator.h
+	"curveevaluator.h"
+
+1351681702 source:/home/jiang/icg_cb/Modeler/Modeler/color.cpp
+	"color.h"
+
+1351681702 /home/jiang/icg_cb/Modeler/Modeler/color.h
+
+1351681704 source:/home/jiang/icg_cb/Modeler/Modeler/common.cxx
+	<string.h>
+
+1351681704 source:/home/jiang/icg_cb/Modeler/Modeler/curve.cpp
+	"curve.h"
+	<algorithm>
+	<functional>
+	<cassert>
+	<cmath>
+	<windows.h>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+	<float.h>
+	"curve.h"
+	"curveevaluator.h"
+
+1351681704 source:/home/jiang/icg_cb/Modeler/Modeler/curveevaluator.cpp
+	"curveevaluator.h"
+
+1351681712 /home/jiang/icg_cb/Modeler/Modeler/file dialog/FL/Fl_Native_File_Chooser.H
+	<FL/Fl_Native_File_Chooser_WIN32.H>
+	<FL/Fl_Native_File_Chooser_MAC.H>
+	<FL/Fl_Native_File_Chooser_FLTK.H>
+
+1351681712 /home/jiang/icg_cb/Modeler/Modeler/file dialog/FL/Fl_Native_File_Chooser_WIN32.H
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<commdlg.h>
+	<shlobj.h>
+
+1351681712 /home/jiang/icg_cb/Modeler/Modeler/file dialog/FL/Fl_Native_File_Chooser_MAC.H
+	<Carbon/Carbon.h>
+	<Carbon.h>
+	<FL/filename.H>
+
+1351681712 /home/jiang/icg_cb/Modeler/Modeler/file dialog/FL/Fl_Native_File_Chooser_FLTK.H
+	<FL/Fl_File_Chooser.H>
+	<string.h>
+
+1536509686 source:/home/jiang/icg_cb/Modeler/Modeler/graphwidget.cpp
+	<windows.h>
+	<assert.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<cmath>
+	<cstdio>
+	<algorithm>
+	<float.h>
+	<fstream>
+	"graphwidget.h"
+	"camera.h"
+	"linearcurveevaluator.h"
+
+1515926384 /usr/include/stdio.h
+	<features.h>
+	<stddef.h>
+	<bits/types.h>
+	<libio.h>
+	<stdarg.h>
+	<bits/stdio_lim.h>
+	<bits/sys_errlist.h>
+	<getopt.h>
+	<bits/stdio.h>
+	<bits/stdio2.h>
+	<bits/stdio-ldbl.h>
+
+1515926384 /usr/include/features.h
+	<stdc-predef.h>
+	<sys/cdefs.h>
+	<gnu/stubs.h>
+
+1515926384 /usr/include/stdc-predef.h
+
+1515926384 /usr/include/libio.h
+	<_G_config.h>
+	<stdarg.h>
+	<sys/cdefs.h>
+	<shlib-compat.h>
+	<bits/libio-ldbl.h>
+
+1515926384 /usr/include/_G_config.h
+	<bits/types.h>
+	<stddef.h>
+	<wchar.h>
+	<gconv.h>
+
+1515926384 /usr/include/wchar.h
+	<features.h>
+	<stdio.h>
+	<stdarg.h>
+	<bits/wchar.h>
+	<stddef.h>
+	<wctype.h>
+	<xlocale.h>
+	<xlocale.h>
+	<xlocale.h>
+	<wctype.h>
+	<bits/wchar2.h>
+	<bits/wchar-ldbl.h>
+
+1515926384 /usr/include/wctype.h
+	<features.h>
+	<bits/types.h>
+	<wchar.h>
+	<endian.h>
+	<xlocale.h>
+
+1515926384 /usr/include/endian.h
+	<features.h>
+	<bits/endian.h>
+	<bits/byteswap.h>
+
+1515926384 /usr/include/xlocale.h
+
+1515926384 /usr/include/gconv.h
+	<features.h>
+	<wchar.h>
+	<stddef.h>
+
+1515926384 /usr/include/getopt.h
+	<ctype.h>
+
+1515926384 /usr/include/ctype.h
+	<features.h>
+	<bits/types.h>
+	<endian.h>
+	<xlocale.h>
+
+1515926384 /usr/include/string.h
+	<features.h>
+	<stddef.h>
+	<xlocale.h>
+	<bits/string.h>
+	<bits/string2.h>
+	<bits/string3.h>
+
+1515926384 /usr/include/stdlib.h
+	<features.h>
+	<stddef.h>
+	<bits/waitflags.h>
+	<bits/waitstatus.h>
+	<xlocale.h>
+	<sys/types.h>
+	<alloca.h>
+	<bits/stdlib-bsearch.h>
+	<bits/stdlib-float.h>
+	<bits/stdlib.h>
+	<bits/stdlib-ldbl.h>
+
+1515926384 /usr/include/alloca.h
+	<features.h>
+	<stddef.h>
+
+1515926384 /usr/include/locale.h
+	<features.h>
+	<stddef.h>
+	<bits/locale.h>
+	<xlocale.h>
+
+1485558410 /usr/include/X11/Xlocale.h
+	<X11/Xfuncproto.h>
+	<X11/Xosdefs.h>
+	<locale.h>
+
+1477133635 /usr/include/X11/Xfuncproto.h
+
+1477133635 /usr/include/X11/Xosdefs.h
+
+1485558410 /usr/include/X11/Xlib.h
+	<sys/types.h>
+	<stdint.h>
+	<X11/X.h>
+	<X11/Xfuncproto.h>
+	<X11/Xosdefs.h>
+	<stddef.h>
+	<stdlib.h>
+
+1515926384 /usr/include/stdint.h
+	<features.h>
+	<bits/wchar.h>
+	<bits/wordsize.h>
+
+1477133635 /usr/include/X11/X.h
+	<X11/Xmd.h>
+
+1477133635 /usr/include/X11/Xmd.h
+	<sys/isa_defs.h>
+
+1493155682 /usr/include/GL/gl.h
+	"gl_mangle.h"
+	<windows.h>
+	<GL/glext.h>
+
+1493155682 /usr/include/GL/gl_mangle.h
+
+1493155682 /usr/include/GL/glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1515926384 /usr/include/inttypes.h
+	<features.h>
+	<stdint.h>
+	<stddef.h>
+
+1442166560 /usr/include/GL/glu.h
+	"glu_mangle.h"
+	<GL/gl.h>
+
+1442166560 /usr/include/GL/glu_mangle.h
+
+1515926384 /usr/include/unistd.h
+	<features.h>
+	<bits/posix_opt.h>
+	<bits/environments.h>
+	<bits/types.h>
+	<stddef.h>
+	<bits/confname.h>
+	<getopt.h>
+	<bits/unistd.h>
+
+1515926384 /usr/include/assert.h
+	<features.h>
+
+1351681706 source:/home/jiang/icg_cb/Modeler/Modeler/imageio.cpp
+	"CImg.h"
+	"imageio.h"
+
+1536505298 /home/jiang/icg_cb/Modeler/Modeler/CImg.h
+	<cstdio>
+	<cstdlib>
+	<cstdarg>
+	<cstring>
+	<cmath>
+	<ctime>
+	<sys/time.h>
+	<unistd.h>
+	<windows.h>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/keysym.h>
+	<pthread.h>
+	<sys/ipc.h>
+	<sys/shm.h>
+	<X11/extensions/XShm.h>
+	<X11/extensions/Xrandr.h>
+	"png.h"
+	"jpeglib.h"
+	"tiffio.h"
+	<fstream>
+	<iostream>
+	<algorithm>
+	<Magick++.h>
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+
+1485558410 /usr/include/X11/Xutil.h
+	<X11/Xlib.h>
+	<X11/keysym.h>
+
+1477133635 /usr/include/X11/keysym.h
+	<X11/keysymdef.h>
+
+1477133635 /usr/include/X11/keysymdef.h
+
+1515926384 /usr/include/pthread.h
+	<features.h>
+	<endian.h>
+	<sched.h>
+	<time.h>
+	<bits/pthreadtypes.h>
+	<bits/setjmp.h>
+	<bits/wordsize.h>
+
+1515926384 /usr/include/sched.h
+	<features.h>
+	<bits/types.h>
+	<stddef.h>
+	<time.h>
+	<bits/sched.h>
+
+1515926384 /usr/include/time.h
+	<features.h>
+	<stddef.h>
+	<bits/time.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<xlocale.h>
+
+1412523249 /usr/include/X11/extensions/XShm.h
+	<X11/Xfuncproto.h>
+	<X11/extensions/shm.h>
+
+1389001199 /usr/include/X11/extensions/shm.h
+
+1481066229 /usr/include/X11/extensions/Xrandr.h
+	<X11/extensions/randr.h>
+	<X11/extensions/Xrender.h>
+	<X11/Xfuncproto.h>
+
+1437726582 /usr/include/X11/extensions/randr.h
+
+1480963962 /usr/include/X11/extensions/Xrender.h
+	<X11/Xlib.h>
+	<X11/Xfuncproto.h>
+	<X11/Xosdefs.h>
+	<X11/Xutil.h>
+	<X11/extensions/render.h>
+
+1309565545 /usr/include/X11/extensions/render.h
+	<X11/Xdefs.h>
+
+1477133635 /usr/include/X11/Xdefs.h
+	<X11/Xmd.h>
+
+1483987831 /usr/include/png.h
+	"pnglibconf.h"
+	"pngconf.h"
+
+1483987831 /usr/include/pnglibconf.h
+
+1483987831 /usr/include/pngconf.h
+	<limits.h>
+	<stddef.h>
+	<stdio.h>
+	<setjmp.h>
+	<time.h>
+
+1515926384 /usr/include/limits.h
+	<features.h>
+	<bits/wordsize.h>
+	<bits/posix1_lim.h>
+	<bits/posix2_lim.h>
+	<bits/xopen_lim.h>
+
+1515926384 /usr/include/setjmp.h
+	<features.h>
+	<bits/setjmp.h>
+	<bits/sigset.h>
+	<bits/setjmp2.h>
+
+1476971487 /usr/include/jpeglib.h
+	"jconfig.h"
+	"jmorecfg.h"
+	"jpegint.h"
+	"jerror.h"
+
+1536301084 /usr/local/include/jconfig.h
+
+1476971487 /usr/include/jmorecfg.h
+
+1474414619 /usr/include/jpegint.h
+
+1476971487 /usr/include/jerror.h
+
+1351681706 /home/jiang/icg_cb/Modeler/Modeler/imageio.h
+
+1351681706 source:/home/jiang/icg_cb/Modeler/Modeler/indicatorwindow.cpp
+	<FL/Fl.H>
+	<FL/fl_draw.H>
+	<algorithm>
+	<cfloat>
+	<cassert>
+	"indicatorwindow.h"
+
+1536299935 /usr/local/include/FL/fl_draw.H
+	<FL/x.H>
+	<FL/Enumerations.H>
+	<FL/Fl_Window.H>
+	<FL/Fl_Device.H>
+
+1536299935 /usr/local/include/FL/x.H
+	"Enumerations.H"
+	"win32.H"
+	"mac.H"
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xatom.h>
+	"Fl_Window.H"
+
+1536299935 /usr/local/include/FL/win32.H
+	<windows.h>
+	<FL/Fl_Window.H>
+
+1536299935 /usr/local/include/FL/mac.H
+	<FL/Fl_Widget.H>
+	<ApplicationServices/ApplicationServices.h>
+	"Fl_Window.H"
+	"../src/Fl_Font.H"
+
+1477133635 /usr/include/X11/Xatom.h
+
+1536299935 /usr/local/include/FL/Fl_Device.H
+	<FL/x.H>
+	<FL/Fl_Plugin.H>
+	<FL/Fl_Image.H>
+	<FL/Fl_Bitmap.H>
+	<FL/Fl_Pixmap.H>
+	<FL/Fl_RGB_Image.H>
+	<stdlib.h>
+
+1536299935 /usr/local/include/FL/Fl_Plugin.H
+	"Fl_Preferences.H"
+
+1536299935 /usr/local/include/FL/Fl_Pixmap.H
+	"Fl_Image.H"
+	"x.H"
+
+1536299935 /usr/local/include/FL/Fl_RGB_Image.H
+	"Fl_Image.H"
+
+1351681706 source:/home/jiang/icg_cb/Modeler/Modeler/linearcurveevaluator.cpp
+	"linearcurveevaluator.h"
+	<cassert>
+
+1351681706 source:/home/jiang/icg_cb/Modeler/Modeler/main.cpp
+	"controller.h"
+	"model.h"
+
+1351681704 /home/jiang/icg_cb/Modeler/Modeler/controller.h
+	"modelerapp.h"
+
+1351681706 /home/jiang/icg_cb/Modeler/Modeler/model.h
+	"animator.h"
+
+1351681702 /home/jiang/icg_cb/Modeler/Modeler/animator.h
+	<math.h>
+	<FL/gl.h>
+	"vec.h"
+	"modelerapp.h"
+	"modelerview.h"
+	"modelerdraw.h"
+	"particleSystem.h"
+
+1515926384 /usr/include/math.h
+	<features.h>
+	<bits/math-vector.h>
+	<bits/huge_val.h>
+	<bits/huge_valf.h>
+	<bits/huge_vall.h>
+	<bits/inf.h>
+	<bits/nan.h>
+	<bits/mathdef.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathinline.h>
+	<bits/math-finite.h>
+
+1351681706 source:/home/jiang/icg_cb/Modeler/Modeler/modelerapp.cpp
+	"particleSystem.h"
+	"modelerapp.h"
+	"modelerview.h"
+	"modelerui.h"
+	"camera.h"
+	<FL/Fl_Value_Slider.H>
+	<FL/Fl_Box.H>
+	<cstring>
+	<cstdio>
+	<cstdlib>
+
+1536505418 source:/home/jiang/icg_cb/Modeler/Modeler/modelerdraw.cpp
+	"modelerdraw.h"
+	<FL/gl.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+	<cstdio>
+	<cstdlib>
+	<string.h>
+
+1536509749 source:/home/jiang/icg_cb/Modeler/Modeler/modelerui.cpp
+	<cassert>
+	<string>
+	<FL/fl_ask.H>
+	"modelerui.h"
+	"camera.h"
+	"dialog.h"
+
+1351681704 /home/jiang/icg_cb/Modeler/Modeler/dialog.h
+	<FL/Fl.H>
+	<FL/Fl_Window.H>
+	<FL/Fl_Int_Input.H>
+	<FL/Fl_Text_Display.H>
+	<stdlib.h>
+
+1536299935 /usr/local/include/FL/Fl_Int_Input.H
+	"Fl_Input.H"
+
+1536299935 /usr/local/include/FL/Fl_Text_Display.H
+	"fl_draw.H"
+	"Fl_Group.H"
+	"Fl_Widget.H"
+	"Fl_Scrollbar.H"
+	"Fl_Text_Buffer.H"
+	<FL/FL_Text_Display.H>
+
+1536299935 /usr/local/include/FL/Fl_Text_Buffer.H
+	<assert.h>
+	"Fl_Export.H"
+
+1351681708 source:/home/jiang/icg_cb/Modeler/Modeler/modeleruiwindows.cxx
+	"modeleruiwindows.h"
+
+1536506248 /home/jiang/icg_cb/Modeler/Modeler/modeleruiwindows.h
+	<FL/Fl.H>
+	<FL/Fl_Window.H>
+	<FL/Fl_Menu_Bar.H>
+	<FL/Fl_Browser.H>
+	<FL/Fl_Tabs.H>
+	<FL/Fl_Scroll.H>
+	<FL/Fl_Pack.H>
+	"FL/Fl_Box.H"
+	"FL/Fl_Value_Slider.H"
+	<FL/Fl_Group.H>
+	<FL/Fl_Box.H>
+	"rulerwindow.h"
+	"graphwidget.h"
+	<FL/Fl_Choice.H>
+	<FL/Fl_Light_Button.H>
+	<FL/Fl_Button.H>
+	<FL/Fl_Value_Slider.H>
+	"indicatorwindow.h"
+	<FL/Fl_Slider.H>
+	<FL/Fl_Output.H>
+	"modelerview.h"
+
+1351681708 source:/home/jiang/icg_cb/Modeler/Modeler/modelerview.cpp
+	"modelerview.h"
+	"camera.h"
+	"modelerapp.h"
+	"particleSystem.h"
+	"imageio.h"
+	<FL/Fl.H>
+	<FL/Fl_Gl_Window.H>
+	<FL/gl.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+	<cstdio>
+
+1351681708 source:/home/jiang/icg_cb/Modeler/Modeler/particleSystem.cpp
+	"particleSystem.h"
+	<cstdio>
+	<cstdlib>
+	<cassert>
+	<cmath>
+
+1351681708 source:/home/jiang/icg_cb/Modeler/Modeler/point.cpp
+	"point.h"
+
+1351681710 source:/home/jiang/icg_cb/Modeler/Modeler/rect.cpp
+	"rect.h"
+	<algorithm>
+
+1536506924 source:/home/jiang/icg_cb/Modeler/Modeler/robotarm.cpp
+	"modelerview.h"
+	"modelerapp.h"
+	"modelerdraw.h"
+	"particleSystem.h"
+	<FL/gl.h>
+	<cstdlib>
+
+1351681710 source:/home/jiang/icg_cb/Modeler/Modeler/rulerwindow.cpp
+	<cmath>
+	<string>
+	<cfloat>
+	<cstdio>
+	"FL/Fl.H"
+	"FL/fl_draw.H"
+	"rulerwindow.h"
+
+1351681710 source:/home/jiang/icg_cb/Modeler/Modeler/trackball.c
+	"trackball.h"
+
+1351681710 /home/jiang/icg_cb/Modeler/Modeler/trackball.h
+	"vect.h"
+
+1351681710 /home/jiang/icg_cb/Modeler/Modeler/vect.h
+	<math.h>
+
+1351681710 source:/home/jiang/icg_cb/Modeler/Modeler/vect.c
+	<stdio.h>
+	<malloc.h>
+	"vect.h"
+
+1515926384 /usr/include/malloc.h
+	<features.h>
+	<stddef.h>
+	<stdio.h>
+

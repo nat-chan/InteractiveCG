@@ -41,3 +41,6 @@ bin/
 
 # ctags -R 環境依存のフルパスが出るため
 tags
+
+# zip
+*.zip
