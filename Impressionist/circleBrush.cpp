@@ -8,7 +8,7 @@
 #include "impressionistDoc.h"
 #include "impressionistUI.h"
 #include "circleBrush.h"
-#include "stdio.h"
+#include <math.h>
 
 extern float frand();
 
@@ -45,12 +45,18 @@ void CircleBrush::BrushMove( const Point source, const Point target )
 		return;
 	}
 
-	//SetColorAlpha( source, alpha );
+	int size = pDoc->getSize();
+	int div=12;
+	float radius = size/2.0;
+	float Ax, Ay;
+	glBegin( GL_POLYGON );
 	SetColor( source );
-	glBegin( GL_POINTS );
-	glVertex2d( target.x, target.y );
+	for (int i = 0; i < div; i++) {
+		Ax=target.x + radius*cos(2*M_PI*i/div);
+		Ay=target.y + radius*sin(2*M_PI*i/div);
+		glVertex2f(Ax, Ay);
+	}
 	glEnd();
-	printf("called\n");
 }
 
 void CircleBrush::BrushEnd( const Point source, const Point target )
