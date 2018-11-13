@@ -18,6 +18,7 @@ enum CONTROLLERS {
 
 	FRAME_CONTROLS,   // フレームコントローラ（変更しないこと)
     // ～～～列挙子を追加～～～
+    X_POSITION,
 
     NUM_CONTROLS,   // コントローラ数（必ず末尾に追加）
 };
@@ -30,6 +31,8 @@ void SetController( ModelerControl* controls )
     controls[FRAME_CONTROLS] = ModelerControl( "Frame Number", 0, (float)max_frame_count, 1, 0 );
 
     // ～～～スライダを追加～～～
+    // Label Min Max step Init
+    controls[X_POSITION] = ModelerControl("X-Position", -3.0f, 3.0f, 0.1f, 0.0f);
 
 }
 
