@@ -55,9 +55,9 @@ OBJDIR_RELEASE = obj/Release
 DEP_RELEASE = 
 OUT_RELEASE = bin/Release/Impressionist
 
-OBJ_DEBUG = $(OBJDIR_DEBUG)/pointBrush.o $(OBJDIR_DEBUG)/paintView.o $(OBJDIR_DEBUG)/originalView.o $(OBJDIR_DEBUG)/impressionistUI.o $(OBJDIR_DEBUG)/FltDesignUI.o $(OBJDIR_DEBUG)/impressionistDoc.o $(OBJDIR_DEBUG)/impressionist.o $(OBJDIR_DEBUG)/impBrush.o $(OBJDIR_DEBUG)/bitmap.o
+OBJ_DEBUG = $(OBJDIR_DEBUG)/circleBrush.o $(OBJDIR_DEBUG)/triangleBrush.o $(OBJDIR_DEBUG)/pointBrush.o $(OBJDIR_DEBUG)/paintView.o $(OBJDIR_DEBUG)/originalView.o $(OBJDIR_DEBUG)/impressionistUI.o $(OBJDIR_DEBUG)/FltDesignUI.o $(OBJDIR_DEBUG)/impressionistDoc.o $(OBJDIR_DEBUG)/impressionist.o $(OBJDIR_DEBUG)/impBrush.o $(OBJDIR_DEBUG)/bitmap.o
 
-OBJ_RELEASE = $(OBJDIR_RELEASE)/pointBrush.o $(OBJDIR_RELEASE)/paintView.o $(OBJDIR_RELEASE)/originalView.o $(OBJDIR_RELEASE)/impressionistUI.o $(OBJDIR_RELEASE)/FltDesignUI.o $(OBJDIR_RELEASE)/impressionistDoc.o $(OBJDIR_RELEASE)/impressionist.o $(OBJDIR_RELEASE)/impBrush.o $(OBJDIR_RELEASE)/bitmap.o
+OBJ_RELEASE = $(OBJDIR_DEBUG)/circleBrush.o $(OBJDIR_DEBUG)/triangleBrush.o $(OBJDIR_RELEASE)/pointBrush.o $(OBJDIR_RELEASE)/paintView.o $(OBJDIR_RELEASE)/originalView.o $(OBJDIR_RELEASE)/impressionistUI.o $(OBJDIR_RELEASE)/FltDesignUI.o $(OBJDIR_RELEASE)/impressionistDoc.o $(OBJDIR_RELEASE)/impressionist.o $(OBJDIR_RELEASE)/impBrush.o $(OBJDIR_RELEASE)/bitmap.o
 
 all: debug release
 
@@ -76,6 +76,12 @@ out_debug: before_debug $(OBJ_DEBUG) $(DEP_DEBUG)
 
 $(OBJDIR_DEBUG)/pointBrush.o: pointBrush.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c pointBrush.cpp -o $(OBJDIR_DEBUG)/pointBrush.o
+
+$(OBJDIR_DEBUG)/triangleBrush.o: triangleBrush.cpp
+	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c triangleBrush.cpp -o $(OBJDIR_DEBUG)/triangleBrush.o
+
+$(OBJDIR_DEBUG)/circleBrush.o: circleBrush.cpp
+	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c circleBrush.cpp -o $(OBJDIR_DEBUG)/circleBrush.o
 
 $(OBJDIR_DEBUG)/paintView.o: paintView.cpp
 	$(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c paintView.cpp -o $(OBJDIR_DEBUG)/paintView.o
@@ -119,6 +125,12 @@ out_release: before_release $(OBJ_RELEASE) $(DEP_RELEASE)
 
 $(OBJDIR_RELEASE)/pointBrush.o: pointBrush.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c pointBrush.cpp -o $(OBJDIR_RELEASE)/pointBrush.o
+
+$(OBJDIR_RELEASE)/triangleBrush.o: triangleBrush.cpp
+	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c triangleBrush.cpp -o $(OBJDIR_RELEASE)/triangleBrush.o
+
+$(OBJDIR_RELEASE)/circleBrush.o: circleBrush.cpp
+	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c circleBrush.cpp -o $(OBJDIR_RELEASE)/circleBrush.o
 
 $(OBJDIR_RELEASE)/paintView.o: paintView.cpp
 	$(CXX) $(CFLAGS_RELEASE) $(INC_RELEASE) -c paintView.cpp -o $(OBJDIR_RELEASE)/paintView.o

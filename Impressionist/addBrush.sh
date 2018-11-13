@@ -24,9 +24,18 @@ vim impBrush.h                                                                 \
 
 vim impressionistDoc.cpp                                                       \
     -c 'normal! /^#includeNVypWdi"i'${2}'Brush.h'                            \
-    -c 'normal! /PointsVy/NotePf[di[iBRUSH_'${2^^}'Sf"di"i'${2^}'s'      \
+    -c 'normal! /PointsVy/NotePf[di[iBRUSH_'${2^^}'SfPdwi'${2^}'Brushf"di"i'${2^}'s'      \
     -c 'wq'
 
 vim impressionistUI.cpp                                                        \
     -c 'normal! /PointsVy/ブラシPfPdi"i'${2^}'sfps'${1}'fPdwi'${2^^}'S'\
-		-c 'wq'
+    -c 'wq'
+
+vim Makefile                                                                   \
+    -c 'normal! /OBJ_DEBUGf=a $(OBJDIR_DEBUG)/'$2'Brush.o'                 \
+    -c 'normal! /OBJ_RELEASEf=a $(OBJDIR_DEBUG)/'$2'Brush.o'               \
+    -c 'normal! /^$(OBJDIR_DEBUG)/pointBrush.oV}y/paintkpV}'             \
+    -c "'<,'>s/point/${2}/g"                                                   \
+		-c 'normal! /^$(OBJDIR_RELEASE)/pointBrush.oV}y/paintkpV}'           \
+    -c "'<,'>s/point/${2}/g"                                                   \
+    -c 'wq'

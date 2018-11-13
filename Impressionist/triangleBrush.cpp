@@ -44,10 +44,21 @@ void TriangleBrush::BrushMove( const Point source, const Point target )
 		return;
 	}
 
+	int size = pDoc->getSize();
+	int Ax,Ay,Bx,By,Cx,Cy;
+	Ax =target.x - 0.5*size;
+	Bx =target.x + 0.5*size;
+	Cx =target.x;
+	Ay =target.y - 0.5*size;
+	By =target.y - 0.5*size;
+	Cy =target.y + 0.5*size;
+
 	//SetColorAlpha( source, alpha );
 	SetColor( source );
-	glBegin( GL_POINTS );
-	glVertex2d( target.x, target.y );
+	glBegin( GL_POLYGON );
+	glVertex2i(Ax, Ay);
+	glVertex2i(Bx, By);
+	glVertex2i(Cx, Cy);
 	glEnd();
 }
 
