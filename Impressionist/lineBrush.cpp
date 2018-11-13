@@ -8,6 +8,7 @@
 #include "impressionistDoc.h"
 #include "impressionistUI.h"
 #include "lineBrush.h"
+#include <math.h>
 
 extern float frand();
 
@@ -44,10 +45,17 @@ void LineBrush::BrushMove( const Point source, const Point target )
 		return;
 	}
 
-	//SetColorAlpha( source, alpha );
+	int size=pDoc->getSize();
+	int angle=dlg->getAngle();
+	float Ax,Ay,Bx,By;
+	Ax=target.x+size*cos(M_PI*angle/180);
+	Ay=target.y+size*sin(M_PI*angle/180);
+	Bx=target.x-size*cos(M_PI*angle/180);
+	By=target.y-size*sin(M_PI*angle/180);
+	glBegin(GL_LINES); // ê¸Çï`âÊ
 	SetColor( source );
-	glBegin( GL_POINTS );
-	glVertex2d( target.x, target.y );
+	glVertex2f(Ax,Ay);
+	glVertex2f(Bx,By);
 	glEnd();
 }
 

@@ -84,6 +84,13 @@ int ImpressionistDoc::getSize()
 	return m_pUI->getSize();
 }
 
+//---------------------------------------------------------
+// Returns the size of the brush.
+//---------------------------------------------------------
+int ImpressionistDoc::getAngle()
+{
+	return m_pUI->getAngle();
+}
 
 //---------------------------------------------------------
 // Load the specified image
