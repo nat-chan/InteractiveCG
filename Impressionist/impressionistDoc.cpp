@@ -19,6 +19,7 @@
 #include "pointBrush.h"
 #include "triangleBrush.h"
 #include "circleBrush.h"
+#include "lineBrush.h"
 
 
 #define DESTROY(p)	{  if ((p)!=NULL) {delete [] p; p=NULL; } }
@@ -41,6 +42,7 @@ ImpressionistDoc::ImpressionistDoc()
 	ImpBrush::c_pBrushes[BRUSH_POINTS]	= new PointBrush( this, "Points" );
 	ImpBrush::c_pBrushes[BRUSH_TRIANGLES]	= new TriangleBrush( this, "Triangles" );
 	ImpBrush::c_pBrushes[BRUSH_CIRCLES]	= new CircleBrush( this, "Circles" );
+	ImpBrush::c_pBrushes[BRUSH_LINES]	= new LineBrush( this, "Lines" );
 	// Note: You should implement these 5 brushes.  They are set the same (PointBrush) for now
 
 	// make one of the brushes current
