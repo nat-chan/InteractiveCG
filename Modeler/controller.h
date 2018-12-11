@@ -24,6 +24,7 @@ enum CONTROLLERS {
 	X_ROTATE,
 	Y_ROTATE,
 	Z_ROTATE,
+	THETA,
 
 	NUM_CONTROLS,	// コントローラ数（必ず末尾に追加）
 };
@@ -41,9 +42,10 @@ void SetController( ModelerControl* controls )
 	controls[X_POSITION] = ModelerControl("X-Position" , -3.0f , 3.0f , 0.1f , 0.0f);
 	controls[Y_POSITION] = ModelerControl("Y-Position" , -3.0f , 3.0f , 0.1f , 0.0f);
 	controls[Z_POSITION] = ModelerControl("Z-Position" , -3.0f , 3.0f , 0.1f , 0.0f);
-	controls[X_ROTATE]   = ModelerControl("X-Rotate"   ,  0    , 360  , 1    , 0   );
-	controls[Y_ROTATE]   = ModelerControl("Y-Rotate"   ,  0    , 360  , 1    , 0   );
-	controls[Z_ROTATE]   = ModelerControl("Z-Rotate"   ,  0    , 360  , 1    , 0   );
+	controls[X_ROTATE]   = ModelerControl("X-Rotate"   , 0     , 360  , 1    , 0   );
+	controls[Y_ROTATE]   = ModelerControl("Y-Rotate"   , 0     , 360  , 1    , 0   );
+	controls[Z_ROTATE]   = ModelerControl("Z-Rotate"   , 0     , 360  , 1    , 0   );
+	controls[THETA]      = ModelerControl("THETA"      , -1    , 1    , 0.01 , 0   );
 
 }
 

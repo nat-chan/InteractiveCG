@@ -11,7 +11,7 @@
 #include "animator.h"
 
 // ƒtƒŒ[ƒ€”Ô†‚ÌÅ‘å’l
-int max_frame_count = 500;
+int max_frame_count = 450;
 
 // ModelƒNƒ‰ƒX‚Ì’è‹`iModelerViewƒNƒ‰ƒX‚ğŒp³j
 class Model : public ModelerView {
@@ -28,6 +28,7 @@ private:
 	//-------------------------------------------------------------------------
 
 		// ```•Ï”‚ğ’Ç‰Á```
+		double theta;
 
 
 	//```````````````````````````````````
@@ -49,6 +50,7 @@ public:
 		//---------------------------------------------------------------------
 
 			// ```•Ï”‚ğ‰Šú‰»```
+			theta = 0;
 
 
 		//```````````````````````````````````
@@ -66,6 +68,7 @@ public:
 		//-----------------------------------------------------------------
 
 			// ```ƒvƒƒOƒ‰ƒ€‚ğ‹Lq```
+		theta = sin(frame_count*M_PI/30);
 
 		//-----------------------------------------------------------------
 	}
@@ -78,6 +81,7 @@ public:
 		//-----------------------------------------------------------------
 
 			// ```ƒvƒƒOƒ‰ƒ€‚ğ‹Lq```
+		theta = GetSliderValue(THETA);
 
 		//-----------------------------------------------------------------
 	}
@@ -100,6 +104,70 @@ public:
 		// ”¼“§–¾ˆ—‚ğ–³Œø‰»
 		glDisable( GL_BLEND );
 	}
+
+	void drawArm(double r1, double r2){
+		glPushMatrix();//“ñ‚Ì˜r
+			glTranslated(-2.5, 0, 0);
+			glRotated(r1, 1, 0, 0);
+			drawSphere(0.6);
+			drawCylinder(2,0.5,0.5);
+			glPushMatrix();//‘O˜r
+				glTranslated(0, 0, 2.4);
+				glRotated(r2, 1, 0, 0);
+				drawSphere(0.6);
+				glTranslated(0, 0, 0.4);
+				drawCylinder(2,0.5,0.5);
+				glTranslated(0,0,2.1);
+				drawSphere(0.4);
+				glTranslated(-0.2-0.2, -0.5, 0.1);
+				drawBox(0.5,1,1.2);
+				glPushMatrix();
+					glTranslated(0, -0.3, 0);
+					drawBox(0.5,0.6,0.5);
+				glPopMatrix();
+				glTranslated(0.3, 0, 0.7);
+				drawBox(0.5,1,0.5);
+			glPopMatrix();//‘O˜r
+		glPopMatrix();//“ñ‚Ì˜r
+	}
+
+	void drawLeg(double r1, double r2){
+		glPushMatrix();//‘¾‚à‚à
+			glTranslated(-1, 0, 0);
+			glRotated(r1, 1, 0, 0);
+			drawSphere(0.7);
+			double adjust = 0.5;
+			double adjust2= 0.1;
+			drawCylinder(2+ adjust,0.5+adjust2,0.5+adjust2);
+			glPushMatrix();//‚Ó‚­‚ç‚Í‚¬
+				glTranslated(0, 0, 2.4+ adjust);
+				glRotated(r2, 1, 0, 0);
+				drawSphere(0.6);
+				glTranslated(0, 0, 0.4);
+				drawCylinder(2,0.5+adjust2,0.5+adjust2);
+				glTranslated(0,0,2.1);
+				drawSphere(0.4);
+				glTranslated(-0.5, -1.4, 0.1);
+				drawBox(1,1.8,0.8);
+			glPopMatrix();//‚Ó‚­‚ç‚Í‚¬
+		glPopMatrix();//‘¾‚à‚à
+	}
+	double thetaBody(double theta){
+		return 2*(theta*theta) -2;
+	}
+	double thetaArm1(double theta){
+		return 50*(theta-0.3);
+	}
+	double thetaArm2(double theta){
+		return 40*(theta*theta) + 100;
+	}
+	double thetaLeg1(double theta){
+		return 50*(theta+0.3);
+	}
+	double thetaLeg2(double theta){
+		return -50*(theta*theta) - 50;
+	}
+
 
 	// ƒIƒuƒWƒFƒNƒg‚Ì•`‰æ
 	void draw()
@@ -136,19 +204,20 @@ public:
 		//---------------------------------------------------------------------
 
 		 // ```ƒvƒƒOƒ‰ƒ€‚ğ‹Lq```
-		//TODO
 		setAmbientColor(0.5,0.4,0.3); //ŠÂ‹«Œõ
 		setSpecularColor(0,1,0); //‹¾–Ê”½ËŒõ
 		setShininess(20.0); //ƒnƒCƒ‰ƒCƒg‚Ì‹­‚³
 
 		glPushMatrix();//Rotate=0‚Å’¼—§‚³‚¹‚é‚½‚ß‚É‘S‘Ì-90‹‰ñ“]
 			glRotated(-90, 1, 0, 0);
-//			glTranslated(GetSliderValue(X_POSITION),
-//			             GetSliderValue(Y_POSITION),
-//			             GetSliderValue(Z_POSITION));
-//			glRotated(   GetSliderValue(X_ROTATE), 1, 0, 0);
-//			glRotated(   GetSliderValue(Y_ROTATE), 0, 1, 0);
-//			glRotated(   GetSliderValue(Z_ROTATE), 0, 0, 1);
+			glTranslated(0, 0, thetaBody(theta));
+			glTranslated(GetSliderValue(X_POSITION),
+			             GetSliderValue(Y_POSITION),
+			             GetSliderValue(Z_POSITION));
+			//‰Á‚¦‚Ä‚¢‚é‚Ì‚ÍÅ‚à‚©‚Á‚±‚æ‚­Œ©‚¦‚é‰ŠúˆÊ’u
+			glRotated( 20+GetSliderValue(X_ROTATE), 1, 0, 0);
+			glRotated(  0+GetSliderValue(Y_ROTATE), 0, 1, 0);
+			glRotated(330+GetSliderValue(Z_ROTATE), 0, 0, 1);
 			setDiffuseColor(0.3,0,0.3,1); //ŠgU”½ËŒõ ‡
 			glPushMatrix();//“·‘Ì
 				glScaled(1.2,0.9,1);
@@ -174,36 +243,26 @@ public:
 				-1  -0.1 , 0.5 , -0.2 ,
 				0   -0.1 , 0.5 , 0.1  ,
 				-1.9-0.1 , 0.5 , 1.6  , 0.5 );
+			setDiffuseColor(0.3,0,0.3,1); //ŠgU”½ËŒõ ‡
 			glPopMatrix();//Šç
-			glPushMatrix();//“ñ‚Ì˜r
+			glPushMatrix();//Œ¨
 				glTranslated(0, 0, up1);
 				glRotated(180, 1, 0, 0);
 				glScaled(0.9,1.2,1);
 				//TODO
-				glPushMatrix();//‰E˜r
-					glTranslated(-2.5, 0, 0);
-					glRotated(GetSliderValue(X_ROTATE), 1, 0, 0);
-					drawSphere(0.6);
-					drawCylinder(2,0.5,0.5);
-					glPushMatrix();//‘O˜r
-						glTranslated(0, 0, 2.4);
-						glRotated(GetSliderValue(Y_ROTATE), 1, 0, 0);
-						drawSphere(0.6);
-						glTranslated(0, 0, 0.4);
-						drawCylinder(2,0.5,0.5);
-						glTranslated(0,0,2.1);
-						drawSphere(0.4);
-						glTranslated(-0.2-0.2, -0.5, 0.1);
-						drawBox(0.5,1,1.2);
-						glPushMatrix();
-							glTranslated(0, -0.3, 0);
-							drawBox(0.5,0.6,0.5);
-						glPopMatrix();
-						glTranslated(0.3, 0, 0.7);
-						drawBox(0.5,1,0.5);
-					glPopMatrix();//‘O˜r
-				glPopMatrix();//‰E˜r
-			glPopMatrix();//“ñ‚Ì˜r
+				drawArm(thetaArm1(theta), thetaArm2(theta));
+				glScaled(-1,1,1);
+				drawArm(thetaArm1(-theta), thetaArm2(-theta));
+			glPopMatrix();//Œ¨
+			glPushMatrix();//˜
+				glTranslated(0, 0, -0.7);
+				glRotated(180, 1, 0, 0);
+				glScaled(0.9,1.2,1);
+				//TODO
+				drawLeg(thetaLeg1(-theta), thetaLeg2(-theta));
+				glScaled(-1,1,1);
+				drawLeg(thetaLeg1(theta), thetaLeg2(theta));
+			glPopMatrix();//Œ¨
 		glPopMatrix();//Rotate=0‚Å’¼—§‚³‚¹‚é‚½‚ß‚É‘S‘Ì90‹‰ñ“]
 
 		//---------------------------------------------------------------------
