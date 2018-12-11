@@ -17,10 +17,15 @@ extern int max_frame_count;
 enum CONTROLLERS {
 
 	FRAME_CONTROLS,   // フレームコントローラ（変更しないこと)
-    // ～～～列挙子を追加～～～
-    X_POSITION,
+	// ～～～列挙子を追加～～～
+	X_POSITION,
+	Y_POSITION,
+	Z_POSITION,
+	X_ROTATE,
+	Y_ROTATE,
+	Z_ROTATE,
 
-    NUM_CONTROLS,   // コントローラ数（必ず末尾に追加）
+	NUM_CONTROLS,	// コントローラ数（必ず末尾に追加）
 };
 
 // コントローラの設定
@@ -28,11 +33,17 @@ enum CONTROLLERS {
 void SetController( ModelerControl* controls )
 {
 	// フレーム番号の制御用スライダ
-    controls[FRAME_CONTROLS] = ModelerControl( "Frame Number", 0, (float)max_frame_count, 1, 0 );
+	controls[FRAME_CONTROLS] = ModelerControl( "Frame Number", 0, (float)max_frame_count, 1, 0 );
 
-    // ～～～スライダを追加～～～
-    // Label Min Max step Init
-    controls[X_POSITION] = ModelerControl("X-Position", -3.0f, 3.0f, 0.1f, 0.0f);
+	// ～～～スライダを追加～～～
+	// Label Min Max step Init
+
+	controls[X_POSITION] = ModelerControl("X-Position" , -3.0f , 3.0f , 0.1f , 0.0f);
+	controls[Y_POSITION] = ModelerControl("Y-Position" , -3.0f , 3.0f , 0.1f , 0.0f);
+	controls[Z_POSITION] = ModelerControl("Z-Position" , -3.0f , 3.0f , 0.1f , 0.0f);
+	controls[X_ROTATE]   = ModelerControl("X-Rotate"   ,  0    , 360  , 1    , 0   );
+	controls[Y_ROTATE]   = ModelerControl("Y-Rotate"   ,  0    , 360  , 1    , 0   );
+	controls[Z_ROTATE]   = ModelerControl("Z-Rotate"   ,  0    , 360  , 1    , 0   );
 
 }
 

@@ -141,29 +141,45 @@ public:
 		setSpecularColor(0,0.4,0); //‹¾–Ê”½ËŒõ
 		setShininess(40.0); //ƒnƒCƒ‰ƒCƒg‚Ì‹­‚³
 
-		glTranslated( GetSliderValue(X_POSITION), 0.0f, 0.0f);
-		setDiffuseColor(0.3,0,0.3,1); //ŠgU”½ËŒõ
-		glPushMatrix();//“·‘Ì
-			glScaled(1.2,0.9,1);
-			float up1 = 3.5;
-			drawCylinder(up1,1,2);
-			glPushMatrix();
-				glTranslated(0, 0, up1);
-				float up2 = 1.;
-				drawCylinder(up2,2,1);
+		glPushMatrix();//Rotate=0‚Å’¼—§‚³‚¹‚é‚½‚ß‚É‘S‘Ì-90‹‰ñ“]
+			glRotated(-90, 1, 0, 0);
+//			glTranslated(GetSliderValue(X_POSITION),
+//			             GetSliderValue(Y_POSITION),
+//			             GetSliderValue(Z_POSITION));
+//			glRotated(   GetSliderValue(X_ROTATE), 1, 0, 0);
+//			glRotated(   GetSliderValue(Y_ROTATE), 0, 1, 0);
+//			glRotated(   GetSliderValue(Z_ROTATE), 0, 0, 1);
+			setDiffuseColor(0.3,0,0.3,1); //ŠgU”½ËŒõ ‡
+			glPushMatrix();//“·‘Ì
+				glScaled(1.2,0.9,1);
+				float up1 = 3.5;
+				drawCylinder(up1,1,2);
 				glPushMatrix();
-					glTranslated(0, 0, up2);
-//					drawSphere(0.9);
+					glTranslated(0, 0, up1);
+					float up2 = 1.;
+					drawCylinder(up2,2,1);
+					glPushMatrix();
+						glTranslated(0, 0, up2);
+//						drawSphere(0.9);
+					glPopMatrix();
 				glPopMatrix();
+				drawSphere(1);
 			glPopMatrix();
-			drawSphere(1);
-		glPopMatrix();
-		glPushMatrix();//Šç
-			float up3 = up1 + up2 + 1.2;
-			glTranslated(0.0, 0.0, up3); glRotated(0, 1, 0, 0); glScaled(1.0, 1.0, 1.5);
-			drawSphere(0.9);
-		glPopMatrix();
-//		   drawTriangle(-3, -3, 0, 3, -3, 0, 0, 3, 0)
+			glPushMatrix();//Šç
+				float up3 = up1 + up2 + 1.2;
+				glTranslated(0.0, 0.0, up3); glRotated(0, 1, 0, 0); glScaled(1.0, 1.0, 1.5);
+				drawSphere(0.9);
+				setDiffuseColor(0.5,0,0,1); //ŠgU”½ËŒõ Ô
+				drawTriangle(
+				0+0.1, 1 , 0.1     ,
+				1+0.1, 1 , -0.2    ,
+				1.9+0.1, 1 , 1.6  );
+				drawTriangle(
+				0   -0.1, 1 , 0.1     ,
+				-1  -0.1, 1 , -0.2    ,
+				-1.9-0.1, 1 , 1.6  );
+			glPopMatrix();
+		glPopMatrix();//Rotate=0‚Å’¼—§‚³‚¹‚é‚½‚ß‚É‘S‘Ì90‹‰ñ“]
 
 		//---------------------------------------------------------------------
 
