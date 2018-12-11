@@ -3,7 +3,7 @@
 WORKDIR = `pwd`
 
 CC = gcc
-CXX = g++
+CXX = g++ -std=c++11
 AR = ar
 LD = g++
 WINDRES = windres

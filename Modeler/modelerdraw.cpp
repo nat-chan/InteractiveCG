@@ -22,14 +22,14 @@ void _dump_current_modelview( void )
 
     if (mds->m_rayFile == NULL)
     {
-        fprintf(stderr, "No .ray file opened for writing, bailing out.\n");
+        fprintf(stderr, "No .ray file opened for writing, bailing out.¥n");
         exit(-1);
     }
 
     GLdouble mv[16];
     glGetDoublev( GL_MODELVIEW_MATRIX, mv );
     fprintf( mds->m_rayFile,
-        "transform(\n    (%f,%f,%f,%f),\n    (%f,%f,%f,%f),\n     (%f,%f,%f,%f),\n    (%f,%f,%f,%f),\n",
+        "transform(¥n    (%f,%f,%f,%f),¥n    (%f,%f,%f,%f),¥n     (%f,%f,%f,%f),¥n    (%f,%f,%f,%f),¥n",
         mv[0], mv[4], mv[8], mv[12],
         mv[1], mv[5], mv[9], mv[13],
         mv[2], mv[6], mv[10], mv[14],
@@ -42,12 +42,12 @@ void _dump_current_material( void )
 
     if (mds->m_rayFile == NULL)
     {
-        fprintf(stderr, "No .ray file opened for writing, bailing out.\n");
+        fprintf(stderr, "No .ray file opened for writing, bailing out.¥n");
         exit(-1);
     }
 
     fprintf( mds->m_rayFile,
-        "material={\n    diffuse=(%f,%f,%f);\n    ambient=(%f,%f,%f);\n}\n",
+        "material={¥n    diffuse=(%f,%f,%f);¥n    ambient=(%f,%f,%f);¥n}¥n",
         mds->m_diffuseColor[0], mds->m_diffuseColor[1], mds->m_diffuseColor[2],
         mds->m_diffuseColor[0], mds->m_diffuseColor[1], mds->m_diffuseColor[2]);
 }
@@ -149,7 +149,7 @@ bool openRayFile(const char rayFileName[])
 {
     ModelerDrawState *mds = ModelerDrawState::Instance();
 
-	fprintf(stderr, "Ray file format output is buggy (ehsu)\n");
+	fprintf(stderr, "Ray file format output is buggy (ehsu)¥n");
 
     if (!rayFileName)
         return false;
@@ -161,10 +161,10 @@ bool openRayFile(const char rayFileName[])
 
     if (mds->m_rayFile != NULL)
     {
-        fprintf( mds->m_rayFile, "SBT-raytracer 1.0\n\n" );
-        fprintf( mds->m_rayFile, "camera { fov=30; }\n\n" );
+        fprintf( mds->m_rayFile, "SBT-raytracer 1.0¥n¥n" );
+        fprintf( mds->m_rayFile, "camera { fov=30; }¥n¥n" );
         fprintf( mds->m_rayFile,
-            "directional_light { direction=(-1,-1,-1); color=(0.7,0.7,0.7); }\n\n" );
+            "directional_light { direction=(-1,-1,-1); color=(0.7,0.7,0.7); }¥n¥n" );
         return true;
     }
     else
@@ -212,9 +212,9 @@ void drawSphere(double r)
     if (mds->m_rayFile)
     {
         _dump_current_modelview();
-        fprintf(mds->m_rayFile, "scale(%f,%f,%f,sphere {\n", r, r, r );
+        fprintf(mds->m_rayFile, "scale(%f,%f,%f,sphere {¥n", r, r, r );
         _dump_current_material();
-        fprintf(mds->m_rayFile, "}))\n" );
+        fprintf(mds->m_rayFile, "}))¥n" );
     }
     else
     {
@@ -241,6 +241,27 @@ void drawSphere(double r)
     }
 }
 
+// p は楕円体の中心。v1, v2, v3 は楕円体の主軸で、互いに直交しており、
+// p±v1, p±v2, p±v3なる点が楕円体の表面上にある。
+// 上のコードでは、原点中心の単位球を描いて、(1,0,0)→v1, (0,1,0)→v2, (0,0,1)→v3 と座標変換して
+// p だけ平行移動している。
+void drawEllipsoid(float *p, float *v1, float *v2, float *v3, int sect)
+{
+    GLfloat mat[16];
+    mat[0] = v1[0]; mat[1] = v1[1]; mat[2] = v1[2]; mat[3] = 0;
+    mat[4] = v2[0]; mat[5] = v2[1]; mat[6] = v2[2]; mat[7] = 0;
+    mat[8] = v3[0]; mat[9] = v3[1]; mat[10] = v3[2]; mat[11] = 0;
+    mat[12] = p[0]; mat[13] = p[1]; mat[14] = p[2]; mat[15] = 1;
+    glMatrixMode(GL_MODELVIEW);
+    glPushMatrix();
+    glMultMatrixf(mat);
+    glEnable(GL_NORMALIZE);
+//    glutSolidSphere(1, sect, sect);
+	drawSphere(sect);
+    glDisable(GL_NORMALIZE);
+    glPopMatrix();
+}
+
 
 void drawBox( double x, double y, double z )
 {
@@ -252,9 +273,9 @@ void drawBox( double x, double y, double z )
     {
         _dump_current_modelview();
         fprintf(mds->m_rayFile,
-            "scale(%f,%f,%f,translate(0.5,0.5,0.5,box {\n", x, y, z );
+            "scale(%f,%f,%f,translate(0.5,0.5,0.5,box {¥n", x, y, z );
         _dump_current_material();
-        fprintf(mds->m_rayFile,  "})))\n" );
+        fprintf(mds->m_rayFile,  "})))¥n" );
     }
     else
     {
@@ -330,9 +351,9 @@ void drawCylinder( double h, double r1, double r2 )
     {
         _dump_current_modelview();
         fprintf(mds->m_rayFile,
-            "cone { height=%f; bottom_radius=%f; top_radius=%f;\n", h, r1, r2 );
+            "cone { height=%f; bottom_radius=%f; top_radius=%f;¥n", h, r1, r2 );
         _dump_current_material();
-        fprintf(mds->m_rayFile, "})\n" );
+        fprintf(mds->m_rayFile, "})¥n" );
     }
     else
     {
@@ -399,9 +420,9 @@ void drawTriangle( double x1, double y1, double z1,
     {
         _dump_current_modelview();
         fprintf(mds->m_rayFile,
-            "polymesh { points=((%f,%f,%f),(%f,%f,%f),(%f,%f,%f)); faces=((0,1,2));\n", x1, y1, z1, x2, y2, z2, x3, y3, z3 );
+            "polymesh { points=((%f,%f,%f),(%f,%f,%f),(%f,%f,%f)); faces=((0,1,2));¥n", x1, y1, z1, x2, y2, z2, x3, y3, z3 );
         _dump_current_material();
-        fprintf(mds->m_rayFile, "})\n" );
+        fprintf(mds->m_rayFile, "})¥n" );
     }
     else
     {
