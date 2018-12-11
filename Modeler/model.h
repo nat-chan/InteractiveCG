@@ -138,8 +138,8 @@ public:
 		 // ```ƒvƒƒOƒ‰ƒ€‚ğ‹Lq```
 		//TODO
 		setAmbientColor(0.5,0.4,0.3); //ŠÂ‹«Œõ
-		setSpecularColor(0,0.4,0); //‹¾–Ê”½ËŒõ
-		setShininess(40.0); //ƒnƒCƒ‰ƒCƒg‚Ì‹­‚³
+		setSpecularColor(0,1,0); //‹¾–Ê”½ËŒõ
+		setShininess(20.0); //ƒnƒCƒ‰ƒCƒg‚Ì‹­‚³
 
 		glPushMatrix();//Rotate=0‚Å’¼—§‚³‚¹‚é‚½‚ß‚É‘S‘Ì-90‹‰ñ“]
 			glRotated(-90, 1, 0, 0);
@@ -154,15 +154,11 @@ public:
 				glScaled(1.2,0.9,1);
 				float up1 = 3.5;
 				drawCylinder(up1,1,2);
-				glPushMatrix();
+				glPushMatrix();//Œ¨
 					glTranslated(0, 0, up1);
 					float up2 = 1.;
 					drawCylinder(up2,2,1);
-					glPushMatrix();
-						glTranslated(0, 0, up2);
-//						drawSphere(0.9);
-					glPopMatrix();
-				glPopMatrix();
+				glPopMatrix();//Œ¨
 				drawSphere(1);
 			glPopMatrix();
 			glPushMatrix();//Šç
@@ -170,15 +166,44 @@ public:
 				glTranslated(0.0, 0.0, up3); glRotated(0, 1, 0, 0); glScaled(1.0, 1.0, 1.5);
 				drawSphere(0.9);
 				setDiffuseColor(0.5,0,0,1); //ŠgU”½ËŒõ Ô
-				drawTriangle(
-				0+0.1, 1 , 0.1     ,
-				1+0.1, 1 , -0.2    ,
-				1.9+0.1, 1 , 1.6  );
-				drawTriangle(
-				0   -0.1, 1 , 0.1     ,
-				-1  -0.1, 1 , -0.2    ,
-				-1.9-0.1, 1 , 1.6  );
-			glPopMatrix();
+				drawTriangularPrism(
+				0  +0.1 , 0.5 , 0.1  ,
+				1  +0.1 , 0.5 , -0.2 ,
+				1.9+0.1 , 0.5 , 1.6  , 0.5);
+				drawTriangularPrism(
+				-1  -0.1 , 0.5 , -0.2 ,
+				0   -0.1 , 0.5 , 0.1  ,
+				-1.9-0.1 , 0.5 , 1.6  , 0.5 );
+			glPopMatrix();//Šç
+			glPushMatrix();//“ñ‚Ì˜r
+				glTranslated(0, 0, up1);
+				glRotated(180, 1, 0, 0);
+				glScaled(0.9,1.2,1);
+				//TODO
+				glPushMatrix();//‰E˜r
+					glTranslated(-2.5, 0, 0);
+					glRotated(GetSliderValue(X_ROTATE), 1, 0, 0);
+					drawSphere(0.6);
+					drawCylinder(2,0.5,0.5);
+					glPushMatrix();//‘O˜r
+						glTranslated(0, 0, 2.4);
+						glRotated(GetSliderValue(Y_ROTATE), 1, 0, 0);
+						drawSphere(0.6);
+						glTranslated(0, 0, 0.4);
+						drawCylinder(2,0.5,0.5);
+						glTranslated(0,0,2.1);
+						drawSphere(0.4);
+						glTranslated(-0.2-0.2, -0.5, 0.1);
+						drawBox(0.5,1,1.2);
+						glPushMatrix();
+							glTranslated(0, -0.3, 0);
+							drawBox(0.5,0.6,0.5);
+						glPopMatrix();
+						glTranslated(0.3, 0, 0.7);
+						drawBox(0.5,1,0.5);
+					glPopMatrix();//‘O˜r
+				glPopMatrix();//‰E˜r
+			glPopMatrix();//“ñ‚Ì˜r
 		glPopMatrix();//Rotate=0‚Å’¼—§‚³‚¹‚é‚½‚ß‚É‘S‘Ì90‹‰ñ“]
 
 		//---------------------------------------------------------------------
