@@ -513,17 +513,4 @@ void drawTriangularPrism( double x1, double y1, double z1,
 	               x3 , y3+h , z3 ,
 	               x1 , y1+h , z1 ,
 	               x1 , y1   , z1);
-	
-//	drawRectangle( x2 , y2   , z2 ,
-//	               x2 , y2+h , z2 ,
-//	               x1 , y1+h , z1 ,
-//	               x1 , y1   , z1);
-//	drawRectangle( x3 , y3   , z3 ,
-//	               x3 , y3+h , z3 ,
-//	               x2 , y2+h , z2 ,
-//	               x2 , y2   , z2);
-//	drawRectangle( x1 , y1   , z1 ,
-//	               x1 , y1+h , z1 ,
-//	               x3 , y3+h , z3 ,
-//	               x3 , y3   , z3);
 }
