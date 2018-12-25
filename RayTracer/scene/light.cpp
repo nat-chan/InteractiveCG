@@ -15,11 +15,15 @@ double DirectionalLight::distanceAttenuation( const Vec3d& P ) const
 
 Vec3d DirectionalLight::shadowAttenuation( const Vec3d& P ) const
 {
-    // YOUR CODE HERE:
-    // You should implement shadow-handling code here.
+    Vec3d d = getDirection(P);         // 光源への方向ベクトルをとる
+    d.normalize();
+    ray r( P, d, ray::SHADOW);         // Pからdへ進む、影の判定用のRayを生成
+    isect i;                           // 交点情報を保存するためのオブジェクトを生成
 
-    return Vec3d(1,1,1);
-
+    if (getScene()->intersect( r, i )) // Rayがシーン上の何らかのオブジェクトと衝突するか判定
+       return Vec3d( 0.0, 0.0, 0.0 );  // 衝突するなら0を返す
+    else
+       return Vec3d( 1.0, 1.0, 1.0 );  // 衝突しなければ1を返す
 }
 
 Vec3d DirectionalLight::getColor( const Vec3d& P ) const
