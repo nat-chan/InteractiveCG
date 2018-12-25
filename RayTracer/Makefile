@@ -2,18 +2,36 @@
 
 WORKDIR = `pwd`
 
-CC = /usr/local/gcc-5.5.0/bin/gcc
-CXX = /usr/local/gcc-5.5.0/bin/g++
+CC = gcc
+CXX = g++
 AR = ar
-LD = /usr/local/gcc-5.5.0/bin/g++
+LD = g++
 WINDRES = windres
 
-INC = -I/home/guest/18/sxxxxxxx/ダウンロード/fltk-1.3.3/include -I/usr/include 
-CFLAGS = `/home/guest/18/sxxxxxxx/ダウンロード/fltk-1.3.3/fltk-config --cxxflags` 
+#ここ
+INC = -I/home/N/dev/fltk-1.3.3/include -I/usr/include 
+CFLAGS = `/home/N/dev/fltk-1.3.3/fltk-config --cxxflags` 
 RESINC = 
-LIBDIR = -L/home/guest/18/sxxxxxxx/ダウンロード/fltk-1.3.3/lib -L/usr/lib64
-LIB = /home/guest/18/sxxxxxxx/ダウンロード/fltk-1.3.3/lib/libfltk_images.a /home/guest/18/sxxxxxxx/ダウンロード/fltk-1.3.3/lib/libfltk_gl.a /home/guest/18/sxxxxxxx/ダウンロード/fltk-1.3.3/lib/libfltk_forms.a /home/guest/18/sxxxxxxx/ダウンロード/fltk-1.3.3/lib/libfltk.a /usr/lib64/libjpeg.so.62  /usr/lib64/libpng12.so.0 /usr/lib64/libGL.so.1 /usr/lib64/libGLU.so.1 
-LDFLAGS = `/home/guest/18/sxxxxxxx/ダウンロード/fltk-1.3.3/fltk-config --ldstaticflags`
+LIBDIR = -L/home/N/dev/fltk-1.3.3/lib -L/usr/lib64
+LIB =\
+/home/N/dev/fltk-1.3.3/lib/libfltk_images.a  \
+/home/N/dev/fltk-1.3.3/lib/libfltk_gl.a      \
+/home/N/dev/fltk-1.3.3/lib/libfltk_forms.a   \
+/home/N/dev/fltk-1.3.3/lib/libfltk.a         \
+/usr/lib/x86_64-linux-gnu/libpng12.so.0      \
+/usr/lib/x86_64-linux-gnu/mesa/libGL.so.1    \
+/usr/lib/x86_64-linux-gnu/libGLU.so.1        \
+/usr/lib/x86_64-linux-gnu/libjpeg.so.62      \
+/usr/lib/x86_64-linux-gnu/libjpeg.so.8       \
+
+#sudo apt-get install libjpeg62
+#for CentOS
+#/usr/lib64/libjpeg.so.62
+#/usr/lib64/libpng12.so.0
+#/usr/lib64/libGL.so.1
+#/usr/lib64/libGLU.so.1 
+LDFLAGS = `/home/N/dev/fltk-1.3.3/fltk-config --ldstaticflags`
+#ここまで
 
 INC_DEBUG = $(INC)
 CFLAGS_DEBUG = $(CFLAGS) -g
