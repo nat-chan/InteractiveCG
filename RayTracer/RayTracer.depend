@@ -1,0 +1,920 @@
+# depslib dependency file v1.0
+1536517219 source:/home/jiang/icg_cb/RayTracer/RayTracer/fileio/buffer.cpp
+	<string>
+	"buffer.h"
+	"../parser/Parser.h"
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/fileio/buffer.h
+	<iostream>
+	<string>
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/parser/Parser.h
+	<string>
+	<map>
+	"ParserException.h"
+	"Tokenizer.h"
+	"../scene/scene.h"
+	"../scene/light.h"
+	"../SceneObjects/Box.h"
+	"../SceneObjects/Cone.h"
+	"../SceneObjects/Cylinder.h"
+	"../SceneObjects/Sphere.h"
+	"../SceneObjects/Square.h"
+	"../SceneObjects/trimesh.h"
+	"../vecmath/vec.h"
+	"../vecmath/mat.h"
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/parser/ParserException.h
+	<string>
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/parser/Tokenizer.h
+	"Token.h"
+	"../fileio/buffer.h"
+	<string>
+	<memory>
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/parser/Token.h
+	<string>
+	<iostream>
+	<map>
+	"ParserException.h"
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/scene/scene.h
+	<vector>
+	<algorithm>
+	<map>
+	<string>
+	<memory>
+	"ray.h"
+	"material.h"
+	"camera.h"
+	"../vecmath/vec.h"
+	"../vecmath/mat.h"
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/scene/ray.h
+	"../vecmath/vec.h"
+	"../vecmath/mat.h"
+	"material.h"
+
+1448354202 /home/jiang/icg_cb/RayTracer/RayTracer/vecmath/vec.h
+	<algorithm>
+	<iostream>
+	<cmath>
+	<assert.h>
+	<windows.h>
+	<GL/gl.h>
+
+1536518243 /home/jiang/icg_cb/RayTracer/RayTracer/vecmath/mat.h
+	<iostream>
+	<cstring>
+	<cmath>
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/scene/material.h
+	"../vecmath/vec.h"
+	"../vecmath/mat.h"
+	<string>
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/scene/camera.h
+	"ray.h"
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/scene/light.h
+	<algorithm>
+	"scene.h"
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/Box.h
+	"../scene/scene.h"
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/Cone.h
+	"../scene/scene.h"
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/Cylinder.h
+	"../scene/scene.h"
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/Sphere.h
+	"../scene/scene.h"
+
+1349166112 /home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/Square.h
+	"../scene/scene.h"
+
+1349166112 /home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/trimesh.h
+	<list>
+	<vector>
+	"../scene/ray.h"
+	"../scene/material.h"
+	"../scene/scene.h"
+
+1515926384 /usr/include/assert.h
+	<features.h>
+
+1515926384 /usr/include/features.h
+	<stdc-predef.h>
+	<sys/cdefs.h>
+	<gnu/stubs.h>
+
+1515926384 /usr/include/stdc-predef.h
+
+1493155682 /usr/include/GL/gl.h
+	"gl_mangle.h"
+	<windows.h>
+	<GL/glext.h>
+
+1493155682 /usr/include/GL/gl_mangle.h
+
+1493155682 /usr/include/GL/glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1515926384 /usr/include/inttypes.h
+	<features.h>
+	<stdint.h>
+	<stddef.h>
+
+1515926384 /usr/include/stdint.h
+	<features.h>
+	<bits/wchar.h>
+	<bits/wordsize.h>
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/fileio/imageio.cpp
+	"CImg.h"
+	"imageio.h"
+
+1536518092 /home/jiang/icg_cb/RayTracer/RayTracer/fileio/CImg.h
+	<cstdio>
+	<cstdlib>
+	<cstdarg>
+	<cstring>
+	<cmath>
+	<ctime>
+	<sys/time.h>
+	<unistd.h>
+	<windows.h>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/keysym.h>
+	<pthread.h>
+	<sys/ipc.h>
+	<sys/shm.h>
+	<X11/extensions/XShm.h>
+	<X11/extensions/Xrandr.h>
+	"png.h"
+	"jpeglib.h"
+	"tiffio.h"
+	<fstream>
+	<iostream>
+	<algorithm>
+	<Magick++.h>
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+	"CImg.h"
+
+1515926384 /usr/include/unistd.h
+	<features.h>
+	<bits/posix_opt.h>
+	<bits/environments.h>
+	<bits/types.h>
+	<stddef.h>
+	<bits/confname.h>
+	<getopt.h>
+	<bits/unistd.h>
+
+1515926384 /usr/include/getopt.h
+	<ctype.h>
+
+1515926384 /usr/include/ctype.h
+	<features.h>
+	<bits/types.h>
+	<endian.h>
+	<xlocale.h>
+
+1515926384 /usr/include/endian.h
+	<features.h>
+	<bits/endian.h>
+	<bits/byteswap.h>
+
+1515926384 /usr/include/xlocale.h
+
+1485558410 /usr/include/X11/Xlib.h
+	<sys/types.h>
+	<stdint.h>
+	<X11/X.h>
+	<X11/Xfuncproto.h>
+	<X11/Xosdefs.h>
+	<stddef.h>
+	<stdlib.h>
+
+1477133635 /usr/include/X11/X.h
+	<X11/Xmd.h>
+
+1477133635 /usr/include/X11/Xmd.h
+	<sys/isa_defs.h>
+
+1477133635 /usr/include/X11/Xfuncproto.h
+
+1477133635 /usr/include/X11/Xosdefs.h
+
+1515926384 /usr/include/stdlib.h
+	<features.h>
+	<stddef.h>
+	<bits/waitflags.h>
+	<bits/waitstatus.h>
+	<xlocale.h>
+	<sys/types.h>
+	<alloca.h>
+	<bits/stdlib-bsearch.h>
+	<bits/stdlib-float.h>
+	<bits/stdlib.h>
+	<bits/stdlib-ldbl.h>
+
+1515926384 /usr/include/alloca.h
+	<features.h>
+	<stddef.h>
+
+1485558410 /usr/include/X11/Xutil.h
+	<X11/Xlib.h>
+	<X11/keysym.h>
+
+1477133635 /usr/include/X11/keysym.h
+	<X11/keysymdef.h>
+
+1477133635 /usr/include/X11/keysymdef.h
+
+1515926384 /usr/include/pthread.h
+	<features.h>
+	<endian.h>
+	<sched.h>
+	<time.h>
+	<bits/pthreadtypes.h>
+	<bits/setjmp.h>
+	<bits/wordsize.h>
+
+1515926384 /usr/include/sched.h
+	<features.h>
+	<bits/types.h>
+	<stddef.h>
+	<time.h>
+	<bits/sched.h>
+
+1515926384 /usr/include/time.h
+	<features.h>
+	<stddef.h>
+	<bits/time.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<xlocale.h>
+
+1412523249 /usr/include/X11/extensions/XShm.h
+	<X11/Xfuncproto.h>
+	<X11/extensions/shm.h>
+
+1389001199 /usr/include/X11/extensions/shm.h
+
+1481066229 /usr/include/X11/extensions/Xrandr.h
+	<X11/extensions/randr.h>
+	<X11/extensions/Xrender.h>
+	<X11/Xfuncproto.h>
+
+1437726582 /usr/include/X11/extensions/randr.h
+
+1480963962 /usr/include/X11/extensions/Xrender.h
+	<X11/Xlib.h>
+	<X11/Xfuncproto.h>
+	<X11/Xosdefs.h>
+	<X11/Xutil.h>
+	<X11/extensions/render.h>
+
+1309565545 /usr/include/X11/extensions/render.h
+	<X11/Xdefs.h>
+
+1477133635 /usr/include/X11/Xdefs.h
+	<X11/Xmd.h>
+
+1483987831 /usr/include/png.h
+	"pnglibconf.h"
+	"pngconf.h"
+
+1483987831 /usr/include/pnglibconf.h
+
+1483987831 /usr/include/pngconf.h
+	<limits.h>
+	<stddef.h>
+	<stdio.h>
+	<setjmp.h>
+	<time.h>
+
+1515926384 /usr/include/limits.h
+	<features.h>
+	<bits/wordsize.h>
+	<bits/posix1_lim.h>
+	<bits/posix2_lim.h>
+	<bits/xopen_lim.h>
+
+1515926384 /usr/include/stdio.h
+	<features.h>
+	<stddef.h>
+	<bits/types.h>
+	<libio.h>
+	<stdarg.h>
+	<bits/stdio_lim.h>
+	<bits/sys_errlist.h>
+	<getopt.h>
+	<bits/stdio.h>
+	<bits/stdio2.h>
+	<bits/stdio-ldbl.h>
+
+1515926384 /usr/include/libio.h
+	<_G_config.h>
+	<stdarg.h>
+	<sys/cdefs.h>
+	<shlib-compat.h>
+	<bits/libio-ldbl.h>
+
+1515926384 /usr/include/_G_config.h
+	<bits/types.h>
+	<stddef.h>
+	<wchar.h>
+	<gconv.h>
+
+1515926384 /usr/include/wchar.h
+	<features.h>
+	<stdio.h>
+	<stdarg.h>
+	<bits/wchar.h>
+	<stddef.h>
+	<wctype.h>
+	<xlocale.h>
+	<xlocale.h>
+	<xlocale.h>
+	<wctype.h>
+	<bits/wchar2.h>
+	<bits/wchar-ldbl.h>
+
+1515926384 /usr/include/wctype.h
+	<features.h>
+	<bits/types.h>
+	<wchar.h>
+	<endian.h>
+	<xlocale.h>
+
+1515926384 /usr/include/gconv.h
+	<features.h>
+	<wchar.h>
+	<stddef.h>
+
+1515926384 /usr/include/setjmp.h
+	<features.h>
+	<bits/setjmp.h>
+	<bits/sigset.h>
+	<bits/setjmp2.h>
+
+1476971487 /usr/include/jpeglib.h
+	"jconfig.h"
+	"jmorecfg.h"
+	"jpegint.h"
+	"jerror.h"
+
+1536301084 /usr/local/include/jconfig.h
+
+1476971487 /usr/include/jmorecfg.h
+
+1474414619 /usr/include/jpegint.h
+
+1476971487 /usr/include/jerror.h
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/fileio/imageio.h
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/getopt.cpp
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+
+1515926384 /usr/include/string.h
+	<features.h>
+	<stddef.h>
+	<xlocale.h>
+	<bits/string.h>
+	<bits/string2.h>
+	<bits/string3.h>
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/main.cpp
+	"ui/GraphicalUI.h"
+	"RayTracer.h"
+	"ui/CommandLineUI.h"
+
+1349166112 /home/jiang/icg_cb/RayTracer/RayTracer/ui/GraphicalUI.h
+	<FL/Fl.H>
+	<FL/Fl_Window.H>
+	<FL/Fl_Menu_Bar.H>
+	<FL/Fl_Value_Slider.H>
+	<FL/Fl_Check_Button.H>
+	<FL/Fl_Button.H>
+	<FL/Fl_File_Chooser.H>
+	"TraceUI.h"
+	"TraceGLWindow.h"
+	"debuggingWindow.h"
+
+1536299935 /usr/local/include/FL/Fl.H
+	<FL/Fl_Cairo.H>
+	"fl_utf8.h"
+	"Enumerations.H"
+
+1536299935 /usr/local/include/FL/Fl_Cairo.H
+	<FL/Fl_Export.H>
+	<cairo-xlib.h>
+	<cairo-win32.h>
+	<cairo-quartz.h>
+
+1536299935 /usr/local/include/FL/Fl_Export.H
+
+1536299935 /usr/local/include/FL/fl_utf8.h
+	"Fl_Export.H"
+	"fl_types.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<locale.h>
+	<ctype.h>
+	<wchar.h>
+	<sys/stat.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<X11/Xlocale.h>
+	<X11/Xlib.h>
+	<locale.h>
+
+1536299935 /usr/local/include/FL/fl_types.h
+
+1515926384 /usr/include/locale.h
+	<features.h>
+	<stddef.h>
+	<bits/locale.h>
+	<xlocale.h>
+
+1485558410 /usr/include/X11/Xlocale.h
+	<X11/Xfuncproto.h>
+	<X11/Xosdefs.h>
+	<locale.h>
+
+1536299935 /usr/local/include/FL/Enumerations.H
+	"Fl_Export.H"
+	"fl_types.h"
+
+1536299935 /usr/local/include/FL/Fl_Window.H
+	<windows.h>
+	"Fl_Group.H"
+	"Fl_Bitmap.H"
+	<stdlib.h>
+
+1536299935 /usr/local/include/FL/Fl_Group.H
+	"Fl_Widget.H"
+
+1536299935 /usr/local/include/FL/Fl_Widget.H
+	"Enumerations.H"
+	<stdint.h>
+	<stddef.h>
+
+1536299935 /usr/local/include/FL/Fl_Bitmap.H
+	"Fl_Image.H"
+
+1536299935 /usr/local/include/FL/Fl_Image.H
+	"Enumerations.H"
+	<stdlib.h>
+
+1536299935 /usr/local/include/FL/Fl_Menu_Bar.H
+	"Fl_Menu_.H"
+
+1536299935 /usr/local/include/FL/Fl_Menu_.H
+	"Fl_Widget.H"
+	"Fl_Menu_Item.H"
+
+1536299935 /usr/local/include/FL/Fl_Menu_Item.H
+	"Fl_Widget.H"
+	"Fl_Image.H"
+
+1536299935 /usr/local/include/FL/Fl_Value_Slider.H
+	"Fl_Slider.H"
+
+1536299935 /usr/local/include/FL/Fl_Slider.H
+	"Fl_Valuator.H"
+
+1536299935 /usr/local/include/FL/Fl_Valuator.H
+	"Fl_Widget.H"
+
+1536299935 /usr/local/include/FL/Fl_Check_Button.H
+	"Fl_Light_Button.H"
+
+1536299935 /usr/local/include/FL/Fl_Light_Button.H
+	"Fl_Button.H"
+
+1536299935 /usr/local/include/FL/Fl_Button.H
+	"Fl_Widget.H"
+
+1536299935 /usr/local/include/FL/Fl_File_Chooser.H
+	<FL/Fl.H>
+	<FL/Fl_Double_Window.H>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<FL/Fl_Group.H>
+	<FL/Fl_Choice.H>
+	<FL/Fl_Menu_Button.H>
+	<FL/Fl_Button.H>
+	<FL/Fl_Preferences.H>
+	<FL/Fl_Tile.H>
+	<FL/Fl_File_Browser.H>
+	<FL/Fl_Box.H>
+	<FL/Fl_Check_Button.H>
+	<FL/Fl_File_Input.H>
+	<FL/Fl_Return_Button.H>
+	<FL/fl_ask.H>
+
+1536299935 /usr/local/include/FL/Fl_Double_Window.H
+	"Fl_Window.H"
+
+1536299935 /usr/local/include/FL/Fl_Choice.H
+	"Fl_Menu_.H"
+
+1536299935 /usr/local/include/FL/Fl_Menu_Button.H
+	"Fl_Menu_.H"
+
+1536299935 /usr/local/include/FL/Fl_Preferences.H
+	<stdio.h>
+	"Fl_Export.H"
+
+1536299935 /usr/local/include/FL/Fl_Tile.H
+	"Fl_Group.H"
+
+1536299935 /usr/local/include/FL/Fl_File_Browser.H
+	"Fl_Browser.H"
+	"Fl_File_Icon.H"
+	"filename.H"
+
+1536299935 /usr/local/include/FL/Fl_Browser.H
+	"Fl_Browser_.H"
+	"Fl_Image.H"
+
+1536299935 /usr/local/include/FL/Fl_Browser_.H
+	"Fl_Group.H"
+	"Fl_Scrollbar.H"
+	<FL/Fl.H>
+
+1536299935 /usr/local/include/FL/Fl_Scrollbar.H
+	"Fl_Slider.H"
+
+1536299935 /usr/local/include/FL/Fl_File_Icon.H
+	"Fl.H"
+
+1536299935 /usr/local/include/FL/filename.H
+	"/usr/include/dirent.h"
+	"Fl_Export.H"
+	<FL/filename.H>
+	<sys/types.h>
+	<direct.h>
+	<sys/types.h>
+	<dirent.h>
+
+1515926384 /usr/include/dirent.h
+	<features.h>
+	<bits/types.h>
+	<bits/dirent.h>
+	<bits/types.h>
+	<bits/posix1_lim.h>
+	<stddef.h>
+
+1536299935 /usr/local/include/FL/Fl_Box.H
+	"Fl_Widget.H"
+
+1536299935 /usr/local/include/FL/Fl_File_Input.H
+	<FL/Fl_Input.H>
+
+1536299935 /usr/local/include/FL/Fl_Input.H
+	"Fl_Input_.H"
+
+1536299935 /usr/local/include/FL/Fl_Input_.H
+	"Fl_Widget.H"
+
+1536299935 /usr/local/include/FL/Fl_Return_Button.H
+	"Fl_Button.H"
+
+1536299935 /usr/local/include/FL/fl_ask.H
+	"Enumerations.H"
+
+1349166112 /home/jiang/icg_cb/RayTracer/RayTracer/ui/TraceUI.h
+	<math.h>
+	"../vecmath/vec.h"
+	"../vecmath/mat.h"
+	<string>
+
+1515926384 /usr/include/math.h
+	<features.h>
+	<bits/math-vector.h>
+	<bits/huge_val.h>
+	<bits/huge_valf.h>
+	<bits/huge_vall.h>
+	<bits/inf.h>
+	<bits/nan.h>
+	<bits/mathdef.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathinline.h>
+	<bits/math-finite.h>
+
+1349166112 /home/jiang/icg_cb/RayTracer/RayTracer/ui/TraceGLWindow.h
+	<FL/Fl.H>
+	<FL/Fl_Gl_Window.H>
+	<FL/gl.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"../RayTracer.h"
+
+1536299935 /usr/local/include/FL/Fl_Gl_Window.H
+	"Fl_Window.H"
+
+1536299935 /usr/local/include/FL/gl.h
+	"Enumerations.H"
+	<windows.h>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+
+1442166560 /usr/include/GL/glu.h
+	"glu_mangle.h"
+	<GL/gl.h>
+
+1442166560 /usr/include/GL/glu_mangle.h
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/RayTracer.h
+	"scene/ray.h"
+
+1349166112 /home/jiang/icg_cb/RayTracer/RayTracer/ui/debuggingWindow.h
+	<FL/Fl.H>
+	<FL/Fl_Window.H>
+	<FL/Fl_Menu_Bar.H>
+	"debuggingView.h"
+
+1349166112 /home/jiang/icg_cb/RayTracer/RayTracer/ui/debuggingView.h
+	<FL/Fl_Gl_Window.H>
+
+1349166112 /home/jiang/icg_cb/RayTracer/RayTracer/ui/CommandLineUI.h
+	"TraceUI.h"
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/parser/Parser.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<memory>
+	"Parser.h"
+	"Tokenizer.h"
+	"../scene/scene.h"
+	"../scene/material.h"
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/parser/ParserException.cpp
+	<iostream>
+	<sstream>
+	"ParserException.h"
+	"Tokenizer.h"
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/parser/Token.cpp
+	<stdio.h>
+	"Token.h"
+	<map>
+	<sstream>
+	<iostream>
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/parser/Tokenizer.cpp
+	<string>
+	<map>
+	<sstream>
+	"../fileio/buffer.h"
+	"Tokenizer.h"
+	"Token.h"
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/RayTracer.cpp
+	"RayTracer.h"
+	"scene/light.h"
+	"scene/material.h"
+	"scene/ray.h"
+	"parser/Tokenizer.h"
+	"parser/Parser.h"
+	"ui/TraceUI.h"
+	<cmath>
+	<algorithm>
+	<iostream>
+	<fstream>
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/scene/camera.cpp
+	"camera.h"
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/scene/light.cpp
+	<cmath>
+	"light.h"
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/scene/material.cpp
+	"ray.h"
+	"material.h"
+	"light.h"
+	"../fileio/imageio.h"
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/scene/ray.cpp
+	"ray.h"
+	"material.h"
+	"scene.h"
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/scene/scene.cpp
+	<cmath>
+	"BSPTree.h"
+	"scene.h"
+	"light.h"
+	"../ui/TraceUI.h"
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/scene/BSPTree.h
+	"../vecmath/vec.h"
+	"../vecmath/mat.h"
+	"scene.h"
+	<list>
+	<algorithm>
+	<assert.h>
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/Box.cpp
+	<cmath>
+	<assert.h>
+	<algorithm>
+	"Box.h"
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/Cone.cpp
+	<cmath>
+	"Cone.h"
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/Cylinder.cpp
+	<cmath>
+	"Cylinder.h"
+
+1349166110 source:/home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/Sphere.cpp
+	<cmath>
+	"Sphere.h"
+
+1349166112 source:/home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/Square.cpp
+	<cmath>
+	"Square.h"
+
+1349166112 source:/home/jiang/icg_cb/RayTracer/RayTracer/SceneObjects/trimesh.cpp
+	<cmath>
+	<float.h>
+	"trimesh.h"
+
+1349166112 source:/home/jiang/icg_cb/RayTracer/RayTracer/ui/CommandLineUI.cpp
+	<iostream>
+	<time.h>
+	<stdarg.h>
+	<assert.h>
+	"CommandLineUI.h"
+	"../fileio/imageio.h"
+	"../RayTracer.h"
+	"../getopt.h"
+
+1349166110 /home/jiang/icg_cb/RayTracer/RayTracer/getopt.h
+	<getopt.h>
+
+1349166112 source:/home/jiang/icg_cb/RayTracer/RayTracer/ui/debuggingView.cpp
+	"debuggingView.h"
+	"ModelerCamera.h"
+	"../RayTracer.h"
+	"../scene/scene.h"
+	"../scene/light.h"
+	<FL/Fl.H>
+	<FL/Fl_Gl_Window.H>
+	<FL/gl.h>
+	<GL/glu.h>
+	<cstdio>
+
+1349166112 /home/jiang/icg_cb/RayTracer/RayTracer/ui/ModelerCamera.h
+	"../vecmath/vec.h"
+	"../vecmath/mat.h"
+
+1349166112 source:/home/jiang/icg_cb/RayTracer/RayTracer/ui/debuggingWindow.cxx
+	"debuggingWindow.h"
+
+1349166112 source:/home/jiang/icg_cb/RayTracer/RayTracer/ui/glObjects.cpp
+	<FL/gl.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"../vecmath/mat.h"
+	"../scene/scene.h"
+	"../scene/ray.h"
+	"../scene/light.h"
+	"../SceneObjects/Box.h"
+	"../SceneObjects/Cone.h"
+	"../SceneObjects/Cylinder.h"
+	"../SceneObjects/Sphere.h"
+	"../SceneObjects/Square.h"
+	"../SceneObjects/trimesh.h"
+
+1349166112 source:/home/jiang/icg_cb/RayTracer/RayTracer/ui/GraphicalUI.cpp
+	<stdio.h>
+	<time.h>
+	<string.h>
+	<stdarg.h>
+	<FL/fl_ask.H>
+	"debuggingView.h"
+	"GraphicalUI.h"
+	"../RayTracer.h"
+	"dialog.h"
+
+1349166112 /home/jiang/icg_cb/RayTracer/RayTracer/ui/dialog.h
+	<FL/Fl.H>
+	<FL/Fl_Window.H>
+	<FL/Fl_Int_Input.H>
+	<FL/Fl_Text_Display.H>
+	<stdlib.h>
+
+1536299935 /usr/local/include/FL/Fl_Int_Input.H
+	"Fl_Input.H"
+
+1536299935 /usr/local/include/FL/Fl_Text_Display.H
+	"fl_draw.H"
+	"Fl_Group.H"
+	"Fl_Widget.H"
+	"Fl_Scrollbar.H"
+	"Fl_Text_Buffer.H"
+	<FL/FL_Text_Display.H>
+
+1536299935 /usr/local/include/FL/fl_draw.H
+	<FL/x.H>
+	<FL/Enumerations.H>
+	<FL/Fl_Window.H>
+	<FL/Fl_Device.H>
+
+1536299935 /usr/local/include/FL/x.H
+	"Enumerations.H"
+	"win32.H"
+	"mac.H"
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xatom.h>
+	"Fl_Window.H"
+
+1536299935 /usr/local/include/FL/win32.H
+	<windows.h>
+	<FL/Fl_Window.H>
+
+1536299935 /usr/local/include/FL/mac.H
+	<FL/Fl_Widget.H>
+	<ApplicationServices/ApplicationServices.h>
+	"Fl_Window.H"
+	"../src/Fl_Font.H"
+
+1477133635 /usr/include/X11/Xatom.h
+
+1536299935 /usr/local/include/FL/Fl_Device.H
+	<FL/x.H>
+	<FL/Fl_Plugin.H>
+	<FL/Fl_Image.H>
+	<FL/Fl_Bitmap.H>
+	<FL/Fl_Pixmap.H>
+	<FL/Fl_RGB_Image.H>
+	<stdlib.h>
+
+1536299935 /usr/local/include/FL/Fl_Plugin.H
+	"Fl_Preferences.H"
+
+1536299935 /usr/local/include/FL/Fl_Pixmap.H
+	"Fl_Image.H"
+	"x.H"
+
+1536299935 /usr/local/include/FL/Fl_RGB_Image.H
+	"Fl_Image.H"
+
+1536299935 /usr/local/include/FL/Fl_Text_Buffer.H
+	<assert.h>
+	"Fl_Export.H"
+
+1349166112 source:/home/jiang/icg_cb/RayTracer/RayTracer/ui/ModelerCamera.cpp
+	<windows.h>
+	<FL/gl.h>
+	<GL/glu.h>
+	"ModelerCamera.h"
+
+1349166112 source:/home/jiang/icg_cb/RayTracer/RayTracer/ui/TraceGLWindow.cpp
+	<iostream>
+	"TraceGLWindow.h"
+	"../RayTracer.h"
+	"GraphicalUI.h"
+	"../fileio/imageio.h"
+

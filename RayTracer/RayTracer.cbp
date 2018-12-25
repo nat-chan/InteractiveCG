@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="RayTracer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/RayTracer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/RayTracer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-s" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="`fltk-config --cxxflags`" />
+			<Add directory="../../../../../usr/include" />
+			<Add directory="../../../../../usr/local/include" />
+		</Compiler>
+		<Linker>
+			<Add option="`fltk-config --ldstaticflags`" />
+			<Add library="../../../../../usr/lib/x86_64-linux-gnu/libGL.so.1" />
+			<Add library="../../../../../usr/lib/x86_64-linux-gnu/libGLU.so.1" />
+			<Add library="../../../../../usr/lib/x86_64-linux-gnu/libpng16.so.16" />
+			<Add library="../../../../../usr/local/lib/libjpeg.so" />
+			<Add library="../../../../../usr/local/lib/libjpeg.a" />
+			<Add library="../../../../../usr/local/lib/libfltk_images.a" />
+			<Add library="../../../../../usr/local/lib/libfltk_gl.a" />
+			<Add library="../../../../../usr/local/lib/libfltk_forms.a" />
+			<Add library="../../../../../usr/local/lib/libfltk.a" />
+			<Add directory="../../../../../usr/local/lib" />
+			<Add directory="../../../../../usr/lib/x86_64-linux-gnu" />
+		</Linker>
+		<Unit filename="RayTracer.cpp" />
+		<Unit filename="RayTracer.h" />
+		<Unit filename="SceneObjects/Box.cpp" />
+		<Unit filename="SceneObjects/Box.h" />
+		<Unit filename="SceneObjects/Cone.cpp" />
+		<Unit filename="SceneObjects/Cone.h" />
+		<Unit filename="SceneObjects/Cylinder.cpp" />
+		<Unit filename="SceneObjects/Cylinder.h" />
+		<Unit filename="SceneObjects/Sphere.cpp" />
+		<Unit filename="SceneObjects/Sphere.h" />
+		<Unit filename="SceneObjects/Square.cpp" />
+		<Unit filename="SceneObjects/Square.h" />
+		<Unit filename="SceneObjects/trimesh.cpp" />
+		<Unit filename="SceneObjects/trimesh.h" />
+		<Unit filename="fileio/CImg.h" />
+		<Unit filename="fileio/buffer.cpp" />
+		<Unit filename="fileio/buffer.h" />
+		<Unit filename="fileio/imageio.cpp" />
+		<Unit filename="fileio/imageio.h" />
+		<Unit filename="general.h" />
+		<Unit filename="getopt.cpp" />
+		<Unit filename="getopt.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="parser/Parser.cpp" />
+		<Unit filename="parser/Parser.h" />
+		<Unit filename="parser/ParserException.cpp" />
+		<Unit filename="parser/ParserException.h" />
+		<Unit filename="parser/Token.cpp" />
+		<Unit filename="parser/Token.h" />
+		<Unit filename="parser/Tokenizer.cpp" />
+		<Unit filename="parser/Tokenizer.h" />
+		<Unit filename="scene/BSPTree.h" />
+		<Unit filename="scene/camera.cpp" />
+		<Unit filename="scene/camera.h" />
+		<Unit filename="scene/light.cpp" />
+		<Unit filename="scene/light.h" />
+		<Unit filename="scene/material.cpp" />
+		<Unit filename="scene/material.h" />
+		<Unit filename="scene/ray.cpp" />
+		<Unit filename="scene/ray.h" />
+		<Unit filename="scene/scene.cpp" />
+		<Unit filename="scene/scene.h" />
+		<Unit filename="ui/CommandLineUI.cpp" />
+		<Unit filename="ui/CommandLineUI.h" />
+		<Unit filename="ui/GraphicalUI.cpp" />
+		<Unit filename="ui/GraphicalUI.h" />
+		<Unit filename="ui/ModelerCamera.cpp" />
+		<Unit filename="ui/ModelerCamera.h" />
+		<Unit filename="ui/TraceGLWindow.cpp" />
+		<Unit filename="ui/TraceGLWindow.h" />
+		<Unit filename="ui/TraceUI.h" />
+		<Unit filename="ui/debuggingView.cpp" />
+		<Unit filename="ui/debuggingView.h" />
+		<Unit filename="ui/debuggingWindow.cxx" />
+		<Unit filename="ui/debuggingWindow.h" />
+		<Unit filename="ui/dialog.h" />
+		<Unit filename="ui/glObjects.cpp" />
+		<Unit filename="vecmath/mat.h" />
+		<Unit filename="vecmath/vec.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
